@@ -1,4 +1,0 @@
-﻿Consistency check for project "cb_motionControl": OK
-Date: 12/05/2023 16:21:56
-
-No Consistency Error in the project!
