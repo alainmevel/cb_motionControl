@@ -1,0 +1,338 @@
+﻿// File: excel.br
+
+// DECLARATIONS
+
+PACKAGE Excel;
+
+
+CLASS Application : OleAutomationObject;
+CLASS OLEObject : OleAutomationObject;
+CLASS Workbooks : OleAutomationObject;
+CLASS Workbook : OleAutomationObject;
+CLASS Worksheet : OleAutomationObject;
+CLASS Worksheets : OleAutomationObject;
+CLASS WorksheetFunction : OleAutomationObject;
+CLASS Range : OleAutomationObject;
+CLASS Shape : OleAutomationObject;
+CLASS Shapes : OleAutomationObject;
+CLASS Name : OleAutomationObject;
+CLASS HyperLinks : OleAutomationObject;
+CLASS HyperLink : OleAutomationObject;
+CLASS Addin : OleAutomationObject;
+
+ATTRIBUTE Application.ScreenUpdating : Boolean;
+ATTRIBUTE Application.CalculateBeforeSave : Boolean;
+ATTRIBUTE Application.Calculation : Integer;
+ATTRIBUTE Application.visible : Boolean;
+ATTRIBUTE Application.Workbooks : Workbooks;
+ATTRIBUTE Application.activeWorkbook : Workbook;
+ATTRIBUTE Application.activeSheet : Worksheet;
+ATTRIBUTE Application.activeCell : Range;
+ATTRIBUTE Application.worksheetFunction : WorksheetFunction;
+ATTRIBUTE Application.selection : Range;
+ATTRIBUTE Application.addins -mult : Addin;
+ATTRIBUTE OLEObject.Name : String;
+ATTRIBUTE OLEObject.Application : Application;
+ATTRIBUTE OLEObject.Object : Workbook;
+ATTRIBUTE Workbook.sheets -mult : Worksheet;
+ATTRIBUTE Workbook.Sheets : Worksheets;
+ATTRIBUTE Workbook.Worksheets -mult : Worksheet;
+ATTRIBUTE Workbook.activeSheet : Worksheet;
+ATTRIBUTE Workbook.visible : Boolean;
+ATTRIBUTE Workbook.application : Application;
+ATTRIBUTE Workbook.fullName : String;
+ATTRIBUTE Workbook.names -mult : Name;
+ATTRIBUTE Worksheet.name : String;
+ATTRIBUTE Worksheet.visible : Boolean;
+ATTRIBUTE Worksheet.cells : Range;
+ATTRIBUTE Worksheet.next : Worksheet;
+ATTRIBUTE Worksheet.shapes : Shapes;
+ATTRIBUTE Worksheet.usedRange : Range;
+ATTRIBUTE Range.formula : String;
+ATTRIBUTE Range.value : String;
+ATTRIBUTE Range.style : String;
+ATTRIBUTE Range.row : Integer;
+ATTRIBUTE Range.rows : Range;
+ATTRIBUTE Range.column : Integer;
+ATTRIBUTE Range.columnWidth : Real;
+ATTRIBUTE Range.cells : Range;
+ATTRIBUTE Range.entireColumn : Range;
+ATTRIBUTE Range.Text : String;
+ATTRIBUTE Range.Name : String;
+ATTRIBUTE Range.Address : String;
+ATTRIBUTE Range.worksheet : Worksheet;
+ATTRIBUTE Range.Hyperlinks : HyperLinks;
+ATTRIBUTE Range.hyperlinks -mult : HyperLink;
+ATTRIBUTE Range.columnWidth : Real;
+ATTRIBUTE Range.rowHeight : Real;
+ATTRIBUTE Range.left : Real;
+ATTRIBUTE Range.top : Real;
+ATTRIBUTE Name.name : String;
+ATTRIBUTE Name.refersToRange : Range;
+ATTRIBUTE Range.Activate : Boolean;
+ATTRIBUTE HyperLink.address : String;
+ATTRIBUTE Addin.installed : Boolean;
+
+METHOD Application.quit() : VOID(Application);
+METHOD Workbooks.open(aFilename : String) : VOID(Workbook);
+METHOD Workbook.Activate() : VOID(Boolean);
+METHOD Workbook.save() : VOID(Boolean);
+METHOD Workbook.saveAs(filename : String) : VOID(Boolean);
+METHOD Workbook.close(bSave : Boolean) : VOID(Boolean);
+METHOD Worksheet.Activate() : VOID(Boolean);
+METHOD WorksheetFunction.find(aString : String, from : String) : VOID(Range);
+METHOD Worksheet.range(cells : String) -prop : VOID(Range);
+METHOD Worksheet.Range(cell1 : Range, cell2 : Range) -prop : VOID(Range);
+METHOD Worksheet.copy(before : Worksheet) : VOID(Boolean);
+METHOD Worksheet.delete() : VOID(Boolean);
+// METHOD Worksheets.add() : VOID(Worksheet);
+METHOD Worksheets.add(before : Worksheet) : VOID(Worksheet);
+METHOD Range.find(what : String) : VOID(Range);
+METHOD Range.Select() : VOID(Boolean);
+METHOD Range.autoFit() : VOID(Boolean);
+METHOD Range.item(rowIndex : Integer, columnIndex : Integer) -prop : VOID(Range);
+METHOD Range.offset(rowOffset : Integer, columnOffset : Integer) -prop : VOID(Range);
+METHOD Range.pasteSpecial() : VOID(Range);
+METHOD Range.merge() : VOID(Range);
+METHOD Shapes.addPicture(filename : String, linkToFile : Integer, saveWithDoc : Integer, left : Real, top : Real, width : Integer, height : Integer) : VOID(Shape);
+
+METHOD HyperLinks.Add(anchor : Range, address : String, subAddress : String, screenTip : String, textToDisplay :String) : VOID(HyperLink);
+
+PACKAGE DEFAULT;
+
+// REPORTING
+
+CLASS GenExcel : Entity_;
+ATTRIBUTE GenExcel.sectionEmptyRows : Integer;	// default = 1
+ATTRIBUTE GenExcel.titleEmptyRows : Integer;		// default = 1
+ATTRIBUTE GenExcel.maxRowHeight : Real;			// optional
+ATTRIBUTE GenExcel.sheetNameIsSectionTitle : Boolean;	// default = FALSE
+ATTRIBUTE GenExcel.maxTextSize : Integer;			// optional
+ATTRIBUTE GenExcel.withPageBreak : Boolean;	// default = FALSE
+ATTRIBUTE GenExcel.directory : String;
+ATTRIBUTE GenExcel.lastNotBlankCellDico : Dictionary;
+
+METHOD GenExcel.initialize(aWorkbook : Excel.Workbook, outDir : String) : {
+	sectionEmptyRows := INT(GETCONFIG("ExcelReport", "SectionEmptyRows")) DEFAULT 1;
+	titleEmptyRows := INT(GETCONFIG("ExcelReport", "TitleEmptyRows")) DEFAULT 1;
+	maxRowHeight := REAL(GETCONFIG("ExcelReport", "MaxRowHeight"));
+	sheetNameIsSectionTitle := BOOL(GETCONFIG("ExcelReport", "SheetNameIsSectionTitle"));	// Fix 171489
+	maxTextSize := INT(GETCONFIG("ExcelReport", "MaxTextSize"));	// Fix 172728
+	TMP styleSheet := $LAST(aWorkbook.sheets);
+	withPageBreak := $SOME(styleSheet.cells.find("PAGE BREAK")) DEFAULT FALSE;
+	directory := outDir;
+	lastNotBlankCellDico := NEW(Dictionary);
+	THIS;
+};
+
+METHOD GenExcel.truncateText(text : String) : $SOME(maxTextSize) IF TRUE: STRSUB(text, 1, maxTextSize) ELSE: text;
+
+METHOD XmlNode.excelReport(aWorkbook : Excel.Workbook, aWorksheet : Excel.Worksheet, aCell : Excel.Range, colOffset : Integer, genExcel : GenExcel) : aCell;
+METHOD XmlNode.excelReport(aWorkbook : Excel.Workbook, aWorksheet : Excel.Worksheet, aCell : Excel.Range, colOffset : Integer, genExcel : GenExcel) : {
+	TMP val : String;
+	tagName
+		IF "article": {
+			//aWorksheet.range("A" + STR(aCell.column) + ":F" + STR(aCell.column)).style := "title";
+			THIS
+		}
+		IF "section": {
+			//aCell := aWorksheet.cells.item(aCell.row + 2, colOffset);
+			TMP level := $CNT(THIS.*(parent)[tagName = "section"]);
+			TMP ok := FALSE;
+			level IF 1: {	// Fix 160602
+				$SOME(previousSibling[tagName = "section"]) IF TRUE: {
+					genExcel.withPageBreak IF TRUE: {
+						aWorksheet := aWorkbook.Sheets.add($LAST(aWorkbook.sheets));
+						aCell := aWorksheet.cells.item(1, colOffset);
+						ok := TRUE;
+					};
+				};
+			};
+			ok IF FALSE: {
+				aCell := aWorksheet.cells.item(aCell.row + genExcel.sectionEmptyRows, colOffset); // Fix 167858
+			};
+			level <= 9 IF TRUE : {
+				aCell.style := "sect" + STR(level);
+			} ELSE : {
+				aCell.style := "sect9";
+			}
+		}
+		IF "para": {
+			aCell.style := getAttribute("style") DEFAULT "para";
+			text.{ //Fix 176379
+				val := STRSUBSTITUTERE(EACH, "\r", ""l");
+				aCell.value := genExcel.truncateText(val);
+			};
+			aCell := aWorksheet.cells.item(aCell.row + 1, colOffset);
+		}
+		IF "colspec": {
+			getAttribute("colwidth").{
+				aCell.columnWidth := INT(EACH) / 7.2;
+			};
+			aCell := aWorksheet.cells.item(aCell.row, aCell.column + 1);
+		}
+		IF "entry": {
+			aCell.style := getAttribute("style") DEFAULT (parent.parent.tagName IF "thead": "tableTitle" ELSE: "entry"); 
+			getBooleanAttribute("displayBlank") IF TRUE : {
+				aWorksheet.Range(genExcel.lastNotBlankCellDico.at(STR(aCell.column))[EACH ISA Excel.Range], aCell).merge();
+			} ELSE : {
+				genExcel.lastNotBlankCellDico.atPut(STR(aCell.column), aCell);
+				text.{ //Fix 176379
+					val := STRSUBSTITUTERE(EACH, "\r", ""l");
+					aCell.value := genExcel.truncateText(val);
+				};
+			};
+		}
+		IF "title": {
+			parent.tagName
+				IF "section": {
+					getAttribute("style").{ aCell.style := EACH; };	// Fix 187980
+					((($CNT(THIS.*(parent)[tagName = "section"]) = 1) AND genExcel.sheetNameIsSectionTitle) AND genExcel.withPageBreak)	// Fix 171489
+						IF TRUE: {
+							TMP sheetName := text;
+							sheetName := STRSUBSTITUTERE(sheetName,"(?:\\|\/|\?|\*|\:|\[|\])","_");
+							STRCNT(text)>31 IF TRUE : {
+								//Fix 179921, note that STRSUB to 25 is done to allow the MAKEUNIQUENAME on several sheets whithout exceed 31 characters in sheet name (we can have up to 99 sheets with same name increasing the counter, that should be sufficient)
+								sheetName := STRSUB(sheetName, 1, 25) + "...";
+							};
+							sheetName := MAKEUNIQUENAME(sheetName, aWorkbook.sheets.name);
+							STRCNT(sheetName)>31 IF TRUE : {
+								sheetName := MAKEUNIQUENAME(STRSUB(sheetName, 1, 25) + "...", aWorkbook.sheets.name);
+							};
+							aWorksheet.name := sheetName;
+						}
+						ELSE: {
+							text.{ //Fix 176379
+								aCell.value := genExcel.truncateText(EACH);
+							};
+							aCell := aWorksheet.cells.item(aCell.row + genExcel.titleEmptyRows, colOffset); // Fix 167858
+						};
+				}
+				ELSE: {
+					aWorksheet.Range(aCell, aCell.offset(0, 5)).style := "title"; // Fix 171483
+					text.{ //Fix 176379
+						aCell.value := genExcel.truncateText(EACH);
+					};
+					aCell := aWorksheet.cells.item(aCell.row + genExcel.titleEmptyRows, colOffset); // Fix 167858
+				};
+		}
+		IF "thead": {
+			aCell := aWorksheet.cells.item(aCell.row, colOffset);
+		}
+		IF "ulink" : {
+			//Fix 169294,171016,171488
+			TMP url := THIS.getAttribute("url");
+			$SOME(url) IF TRUE :{
+				getAttribute("type")
+					IF "include": {
+							TMP toks := STRTOKENS(url, "#");
+							TMP file := FILEFORMATNAME($FIRST(toks), "$a", FILEDIRECTORY($LAST(THIS.*(parent).getAttribute("output"))));
+							file
+								IFRE "\.xls": {
+									{
+										TMP sheet := GETOBJECT(Excel.Workbook, file).sheets[STRMATCH(name, $LAST(toks))];
+										sheet.copy(aWorksheet);
+										aCell;
+									} CATCH {
+										aCell.value := STRF("Can't find sheet '$1' in document '$2'", $LAST(toks), file);
+										aCell := aWorksheet.cells.item(aCell.row + 1, colOffset);
+									};
+								}
+								ELSE: {	// Fix 191008
+									aCell.value := FILECONTENTS(file);
+									aCell := aWorksheet.cells.item(aCell.row + 1, colOffset);
+								};
+						}
+					ELSE: {
+						TMP display := STRSUBSTITUTERE($STRSEP(THIS.text," "), "\r", ""l");
+						aCell.Hyperlinks.Add(aCell, url, "", "Go to: "+url, display DEFAULT url);
+					};
+			} IF FALSE : {
+				text.{	//Fix 175406,176379
+					val := STRSUBSTITUTERE(EACH, "\r", ""l");
+					aCell.value := genExcel.truncateText(val);
+				};
+			};
+			aCell;
+		}
+		IF "imagedata" : { //Fix 172633, 184216
+			TMP src := getAttribute("src");
+			TMP fn : String;
+			TMP toks2 := STRSEARCHRE(src, "data:image/(\w+);base64,(.+)");
+			toks2
+				IF VOID(String): {
+					fn := genExcel.directory + src;
+				}
+				ELSE: {
+					fn := FILETEMP() + "." + $FIRST(toks2);
+					OPENBUFF($LAST(toks2));
+					FBASE64;
+					FOPENW(fn);
+					FEOL(4);
+					PUTCONTENTS();
+					CLOSE;
+					CLOSE;
+				};
+			TMP img := FILELOADIMAGE(fn);
+			img IFNOT VOID(Image): {
+				TMP startCell := aWorksheet.cells.item(aCell.row + 2, aCell.column + 1);
+				aWorksheet.shapes.addPicture(fn, 0, 1, startCell.left, startCell.top, img.width, img.height);
+				TMP nbSkippedRows := (img.height / startCell.rowHeight) + 2;
+				aCell := aWorksheet.cells.item(startCell.row+INT(nbSkippedRows), aCell.column);
+			};
+			FILEDELETE(fn);
+		};
+	elementNodes.{
+		aCell := excelReport(aWorkbook, aWorksheet, aCell, colOffset, genExcel);
+	};
+	tagName
+		IF "row": {
+			$SOME(genExcel.maxRowHeight) AND genExcel.maxRowHeight /= 0.0 AND aCell.rowHeight > genExcel.maxRowHeight
+				IF TRUE: { aCell.rowHeight := genExcel.maxRowHeight };
+			aCell := aWorksheet.cells.item(aCell.row + 1, colOffset);
+		}
+		IF "tgroup": {
+			aCell := aWorksheet.cells.item(aCell.row, colOffset);
+		}
+		IF "entry": {
+			aCell := aWorksheet.cells.item(aCell.row, aCell.column + 1);		
+		};
+	aCell;
+};
+
+METHOD Project.translateReportFromXmlToXLS(aFilename : String, aTemplateFilename : String) : {
+	FILECOPY(aFilename, APPLICATIONDATADIR + "docbook.xml");
+	TMP tree := XMLPARSE(aFilename);
+	FILEDELETE(aFilename);
+	TMP appli := GETOLEAUTOMATIONOBJECT(CLASS(Excel.Application), "") DEFAULT NEW(Excel.Application);
+	TMP doc := appli.Workbooks.open(FILEFORMATNAME(aTemplateFilename, "$a"));
+	//Fix 176381
+	TMP savScreenUpdating  := appli.ScreenUpdating;
+	TMP savCalculation := appli.Calculation;
+	TMP savCalculateBeforeSave := appli.CalculateBeforeSave;
+	appli.ScreenUpdating  := FALSE; 
+	appli.Calculation := -4135; 
+	appli.CalculateBeforeSave := TRUE;
+	
+    TMP startCell := doc.names[name = "START_REPORT"].refersToRange;
+	TMP sheet := startCell.worksheet DEFAULT $FIRST(doc.sheets);
+	{
+		tree.excelReport(doc, sheet, startCell DEFAULT sheet.range("A1"), startCell.column DEFAULT 1, NEW(GenExcel).initialize(doc, FILEDIRECTORY(aFilename)));
+	} CATCH {
+		INFO("Report may be incomplete due to the following error: "n"|"Le rapport peut être incomplet en raison de l'erreur suivante : "n"|"报告可能由于以下错误而不完整: "n"|"次のエラーのためにレポートは不完全になる可能性があります: "n" + LASTERRORSTRING);
+	};
+	doc.sheets[name="Styles"].visible := FALSE;
+	
+	appli.ScreenUpdating  := savScreenUpdating; 
+	appli.Calculation := savCalculation; 
+	appli.CalculateBeforeSave := savCalculateBeforeSave;
+
+	doc.saveAs(FILEFORMATNAME(aFilename, "$a"));
+	doc.close(FALSE);
+//	appli.quit();
+};
+
+METHOD Project.translateReportFromXmlToXLSX(aFilename : String, aTemplateFilename : String) : {
+	//Fix 180231
+	translateReportFromXmlToXLS(aFilename, aTemplateFilename);
+}

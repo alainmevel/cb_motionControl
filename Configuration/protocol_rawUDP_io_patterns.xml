@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Network protocol="rawUDP" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://xsd/network_io_patterns.xsd">
+	<InputPattern>
+		<Pattern>//Example: /* $6 */ P_$1(memHeader, $2)-&gt;CB_current_value = /* $7 */ $3_Extract_$1(&quot;$4&quot;, $5);</Pattern>
+		<Argument Object="currentVariable" Property="sharedMemoryType" />
+		<Argument Object="currentVariable" Property="index" />
+		<Argument Object="currentNetwork" Property="protocol" />
+		<Argument Object="currentFrame" Property="name" />
+		<Argument Object="currentSignal" Property="startBit" />
+		<Argument Object="currentVariable" Property="name" />
+		<Argument Object="currentSignal" Property="name" />
+	</InputPattern>
+	<OutputPattern>
+		<Pattern>//Example: /* $7 */ $3_Compact_$1(/* $6  */ P_$1(memHeader, $2)-&gt;CB_current_value, &quot;$4&quot;, $5);</Pattern>
+		<Argument Object="currentVariable" Property="sharedMemoryType" />
+		<Argument Object="currentVariable" Property="index" />
+		<Argument Object="currentNetwork" Property="protocol" />
+		<Argument Object="currentFrame" Property="name" />
+		<Argument Object="currentSignal" Property="startBit" />
+		<Argument Object="currentVariable" Property="name" />
+		<Argument Object="currentSignal" Property="name" />
+	</OutputPattern>
+</Network>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<APPLICATION NAME="flask_motion_app">
+	<PROPERTIES>
+		<PROPERTY NAME="IdentifierProperty" VALUE="723b1506-4166-480a-a8b1-03472a7d66c3">
+		</PROPERTY>
+		<PROPERTY NAME="noitintilppa" VALUE="true">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+		<PROPERTY NAME="isMainApplicationPropertyName" VALUE="true">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+	</PROPERTIES>
+</APPLICATION>

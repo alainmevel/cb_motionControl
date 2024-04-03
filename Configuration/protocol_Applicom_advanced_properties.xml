@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $Id: protocol_Applicom_advanced_properties.xml 924 2014-11-07 15:38:19Z r3e $ -->
+
+<protocol xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:xsd/protocol_advanced_properties.xsd" name="Applicom">
+	<network>
+		<properties>
+			<properties_set>
+				<property name="trace" type="integer" lowerbound="0" upperbound="2" default="1">
+					<languages>
+						<language name="en">Driver trace</language>
+						<language name="fr">Trace du driver</language>
+					</languages>
+				</property>
+			</properties_set>
+			<properties_set>
+				<languages>
+					<language name="en">Advanced configuration</language>
+					<language name="fr">Configuration avancée</language>
+				</languages>
+				<property name="maxBytePerFrame" type="integer">
+					<languages>
+						<language name="en">Maximum number of bytes per frame</language>
+						<language name="fr">Nombre maximum d'octets par trame</language>
+					</languages>
+				</property>
+				<property name="log" type="integer" lowerbound="0" upperbound="3">
+					<languages>
+						<language name="en">Log level (disable = 0)</language>
+						<language name="fr">Niveau de log (désactivé = 0)</language>
+					</languages>
+				</property>
+				<property name="logName" type="string">
+					<languages>
+						<language name="en">Log filename</language>
+						<language name="fr">Nom du fichier de log</language>
+					</languages>
+				</property>
+			</properties_set>
+		</properties>
+	</network>
+
+	<port>
+		<properties>
+			<properties_set>
+				<property name="cardNumber" type="integer">
+					<languages>
+						<language name="en">Applicom card number</language>
+						<language name="fr">Numéro de carte Applicom</language>
+					</languages>
+				</property>
+			</properties_set>
+		</properties>
+	</port>
+
+	<frame>
+		<properties>
+			<enum name="enum_applicom_equipment">
+				<item>Standard</item>
+				<item>Siemens</item>
+				<item>Rockwell</item>
+			</enum>
+			<enum name="enum_tri_bool">
+				<item></item>
+				<item>0</item>
+				<item>1</item>
+			</enum>
+			<properties_set>
+				<property name="trace" type="integer" lowerbound="0" upperbound="2" default="1">
+					<languages>
+						<language name="en">Frame trace</language>
+						<language name="fr">Trace de la trame</language>
+					</languages>
+				</property>
+			</properties_set>
+			<properties_set>
+				<languages>
+					<language name="en">Applicom frames properties</language>
+					<language name="fr">Propri&#233;t&#233;s des trames Applicom</language>
+				</languages>
+				<property name="cycleTime" type="integer" default="300" lowerbound="100">
+					<languages>
+						<language name="en">Cycle time (ms)</language>
+						<language name="fr">Temps de cycle (ms)</language>
+					</languages>
+				</property>
+				<property name="cardEquipmentNumber" type="integer">
+					<languages>
+						<language name="en">Number of the equipment</language>
+						<language name="fr">Numéro de l'équipement</language>
+					</languages>
+				</property>
+				<property name="channelNumber" type="integer">
+					<languages>
+						<language name="en">Number of the channel</language>
+						<language name="fr">Numéro de canal</language>
+					</languages>
+				</property>
+			</properties_set>
+			<properties_set>
+				<languages>
+					<language name="en">Offsets</language>
+					<language name="fr">Offsets</language>
+				</languages>
+				<property name="equipment" type="enum_applicom_equipment" default="Standard">
+					<languages>
+						<language name="en">Equipment type</language>
+						<language name="fr">Type d&apos;&#233;equipement</language>
+					</languages>
+				</property>
+				<property name="applicomDatabase" type="enum_tri_bool" lowerbound="0">
+					<languages>
+						<language name="en">Is database</language>
+						<language name="fr">Est database</language>
+					</languages>
+				</property>
+				<property name="tableOffset" type="integer" lowerbound="0">
+					<languages>
+						<language name="en">Table offset</language>
+						<language name="fr">Offset de la table</language>
+					</languages>
+				</property>
+				<property name="fileNumber" type="integer" lowerbound="0">
+					<languages>
+						<language name="en">File number (Rockwell)</language>
+						<language name="fr">Numéro de fichier (Rockwell)</language>
+					</languages>
+				</property>
+				<property name="DBNumber" type="integer" lowerbound="0">
+					<languages>
+						<language name="en">DB Number (Siemens)</language>
+						<language name="fr">Numéro de DB (Siemens)</language>
+					</languages>
+				</property>
+			</properties_set>
+			<!--properties_set>
+				<languages><language name="en">Advanced configuration</language><language name="fr">Configuration avancée</language></languages>
+				<property name="switchBytesForBytesAndBooleans" type="enum_tri_bool"><languages><language name="en">switchBytesForBytesAndBooleans</language><language name="fr">switchBytesForBytesAndBooleans</language></languages></property>
+				<property name="switchBytesInWords" type="enum_tri_bool"><languages><language name="en">switchBytesInWords</language><language name="fr">switchBytesInWords</language></languages></property>
+				<property name="switchWordsInDWords" type="enum_tri_bool"><languages><language name="en">switchWordsInDWords</language><language name="fr">switchWordsInDWords</language></languages></property>
+				<property name="switchBytesInWordsInDWords" type="enum_tri_bool"><languages><language name="en">switchBytesInWordsInDWords</language><language name="fr">switchBytesInWordsInDWords</language></languages></property>
+				<property name="SwitchBytesInFrame" type="enum_tri_bool"><languages><language name="en">SwitchBytesInFrame</language><language name="fr">SwitchBytesInFrame</language></languages></property>
+				<property name="noFrameSplit" type="enum_tri_bool"><languages><language name="en">noFrameSplit</language><language name="fr">noFrameSplit</language></languages></property>
+			</properties_set-->
+		</properties>
+	</frame>
+
+	<defaultConfiguration name="default openModbus configuration">
+		<propertyInstance name="comment" value="Auto-build by ControlBuild" />
+	</defaultConfiguration>
+</protocol>

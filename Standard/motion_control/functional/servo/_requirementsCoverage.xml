@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<APPLICATION_REQUIREMENTS>
+	<NODE NAME="servo" TYPE="mac" MODEL_PATH="E:\Dev\SVNFolders\CB_MotionControl\ProjetCB\Standard\motion_control\functional\servo" UUID="2bbd6ee1-c167-41ed-9081-7e700779e9a1">
+		<CHILDREN>
+			<NODE NAME="servo_mode" TYPE="c" MODEL_PATH="E:\Dev\SVNFolders\CB_MotionControl\ProjetCB\Standard\motion_control\functional\servo_mode" UUID="04bacb2b-e3cb-4166-8115-6a40f872e62a">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="servo_control" TYPE="c" MODEL_PATH="E:\Dev\SVNFolders\CB_MotionControl\ProjetCB\Standard\motion_control\functional\servo_control" UUID="d29bc56f-46d5-4755-ab85-33c5d98120e5">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="servo_velocity" TYPE="c" MODEL_PATH="E:\Dev\SVNFolders\CB_MotionControl\ProjetCB\Standard\motion_control\functional\servo_velocity" UUID="3bf874eb-9a03-467e-a207-495e2084703c">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="servo_position" TYPE="c" MODEL_PATH="E:\Dev\SVNFolders\CB_MotionControl\ProjetCB\Standard\motion_control\functional\servo_position" UUID="7daf1e1e-b50e-4fec-ae8f-0015edc2b127">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+		</CHILDREN>
+	</NODE>
+</APPLICATION_REQUIREMENTS>

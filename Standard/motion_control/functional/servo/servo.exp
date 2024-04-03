@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="servo" COMMENTS="This module assembles the different control/position/velocity parts" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" COMPONENT_CLASS_UUID="" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{{0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, 0, {{0, 0, 0}, {0, 0, 0}}}
+};
+T_Instance NbActeurs = 0;
+T_Instance NbProduits = 0;
+T_Instance NbActeursEtProduits = 0;
+
+void globalesInit()
+{
+}" SIGNATURE="2147483647" GENERATION_DATE="1592858211" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good" PLMId="">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
+			<CHILDREN>
+&#9;&#9;&#9;
+				<NODE NAME="servo_mode" MODEL_PATH="Standard\motion_control\servo_mode">
+&#9;&#9;&#9;&#9;
+					<NODE NAME="servo_control" MODEL_PATH="Standard\motion_control\servo_control">
+						<NODE NAME="servo_velocity" MODEL_PATH="Standard\motion_control\servo_velocity">
+							<NODE NAME="servo_position" MODEL_PATH="Standard\motion_control\servo_position" /></NODE></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>

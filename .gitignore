@@ -1,0 +1,13 @@
+*_*_init*
+*.tc
+*.mki
+_init*
+_sign*
+*.tmp
+*.lock
+*.gi
+*.mkelem
+*.keep
+*.res
+*.err
+*.ses

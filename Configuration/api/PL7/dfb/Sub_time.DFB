@@ -1,0 +1,38 @@
+[SOURCE_UNIT]
+SU_TYPE = F_B
+NAME = 'DEFAULT'
+VERSION = '00.15'
+DATE = DATE_AND_TIME #2006-08-17-16:35:11
+LANGUAGE = ST
+BODY = 
+(*Auteur : TNI-Software*)
+FUNCTION_BLOCK Sub_time
+VAR_INPUT
+En : BOOL (*Reserved*) := TRUE;
+In0 : AR_D : 2;
+In1 : AR_D : 2;
+END_VAR
+VAR_OUTPUT
+Out0 : AR_D : 2 := ( 0, 
+0 ) ;
+END_VAR
+VAR
+Inter : DWORD := 0;
+Mem : WORD := 0;
+END_VAR
+(*PHRASE*)
+(* difference of ms  *)
+Inter :=In0[1] - In1[1];
+IF Inter < 0 THEN 
+	Out0[1] := Inter + 864000000;
+	Mem := 1;
+ELSE
+	Out0[1] := Inter;
+	Mem :=0;
+END_IF;
+
+(* difference of days  *)
+Out0[0] := In0[0] - In1[0] - Mem;
+
+(*END_PHRASE*)
+END_FUNCTION_BLOCK

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<io_board_models>
+	<io_board_model brand="Advantech" type="PCI_1711" comment="16 analog I/O">
+		<connectors>
+			<PHYSICAL_CONNECTOR name="0" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="1" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="2" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="3" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="4" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="5" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="6" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="7" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="8" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="9" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="10" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="11" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="12" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="13" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="14" analogic="true" direction="Input/Output" />
+			<PHYSICAL_CONNECTOR name="15" analogic="true" direction="Input/Output" />
+		</connectors>
+	</io_board_model>
+	<io_board_model brand="Advantech" type="PCI_1713" comment="32 analog inputs">
+		<connectors>
+			<PHYSICAL_CONNECTOR name="0" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="1" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="2" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="3" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="4" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="5" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="6" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="7" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="8" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="9" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="10" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="11" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="12" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="13" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="14" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="15" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="16" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="17" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="18" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="19" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="20" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="21" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="22" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="23" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="24" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="25" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="26" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="27" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="28" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="29" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="30" analogic="true" direction="Input" />
+			<PHYSICAL_CONNECTOR name="31" analogic="true" direction="Input" />
+		</connectors>
+	</io_board_model>
+	<io_board_model brand="Advantech" type="PCI_1721" comment="4 analog outputs">
+		<connectors>
+			<PHYSICAL_CONNECTOR name="0" analogic="true" direction="Output" />
+			<PHYSICAL_CONNECTOR name="1" analogic="true" direction="Output" />
+			<PHYSICAL_CONNECTOR name="2" analogic="true" direction="Output" />
+			<PHYSICAL_CONNECTOR name="3" analogic="true" direction="Output" />
+		</connectors>
+	</io_board_model>
+	<io_board_model brand="Advantech" type="PCI_1723" comment="8 analog outputs">
+		<connectors>
+			<PHYSICAL_CONNECTOR name="0" analogic="true" direction="Output" />
+			<PHYSICAL_CONNECTOR name="1" analogic="true" direction="Output" />
+			<PHYSICAL_CONNECTOR name="2" analogic="true" direction="Output" />
+			<PHYSICAL_CONNECTOR name="3" analogic="true" direction="Output" />
+			<PHYSICAL_CONNECTOR name="4" analogic="true" direction="Output" />
+			<PHYSICAL_CONNECTOR name="5" analogic="true" direction="Output" />
+			<PHYSICAL_CONNECTOR name="6" analogic="true" direction="Output" />
+			<PHYSICAL_CONNECTOR name="7" analogic="true" direction="Output" />
+		</connectors>
+	</io_board_model>
+	<io_board_model brand="Advantech" type="PCI_1753" comment="96 digital I/O modulo 8">
+		<connectors>
+			<PHYSICAL_CONNECTOR name="0/0" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="0/1" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="0/2" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="0/3" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="0/4" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="0/5" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="0/6" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="0/7" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="1/0" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="1/1" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="1/2" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="1/3" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="1/4" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="1/5" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="1/6" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="1/7" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="2/1" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="2/2" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="2/3" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="2/4" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="2/5" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="2/6" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="2/7" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="3/1" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="3/2" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="3/3" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="3/4" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="3/5" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="3/6" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="3/7" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="4/1" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="4/2" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="4/3" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="4/4" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="4/5" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="4/6" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="4/7" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="5/1" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="5/2" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="5/3" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="5/4" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="5/5" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="5/6" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="5/7" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="6/1" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="6/2" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="6/3" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="6/4" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="6/5" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="6/6" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="6/7" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="7/1" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="7/2" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="7/3" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="7/4" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="7/5" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="7/6" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="7/7" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="8/1" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="8/2" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="8/3" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="8/4" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="8/5" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="8/6" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="8/7" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="9/1" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="9/2" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="9/3" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="9/4" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="9/5" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="9/6" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="9/7" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="10/1" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="10/2" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="10/3" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="10/4" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="10/5" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="10/6" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="10/7" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="11/1" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="11/2" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="11/3" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="11/4" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="11/5" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="11/6" analogic="false" direction="Output" />
+			<PHYSICAL_CONNECTOR name="11/7" analogic="false" direction="Output" />
+			</connectors>
+	</io_board_model>
+</io_board_models>

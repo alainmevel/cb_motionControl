@@ -1,0 +1,22 @@
+[SOURCE_UNIT]
+SU_TYPE = F_B
+NAME = 'DEFAULT'
+VERSION = '00.23'
+DATE = DATE_AND_TIME #2006-08-17-10:53:27
+LANGUAGE = ST
+BODY = 
+(*Auteur : TNI-Software*)
+FUNCTION_BLOCK Dt_tod
+VAR_INPUT
+En : BOOL (*Reserved*) := TRUE;
+In0 : AR_D : 2;
+END_VAR
+VAR_OUTPUT
+Out0 : AR_D : 1 := ( 0 ) ;
+END_VAR
+(*PHRASE*)
+(* Copy time  *)
+Out0[0] := In0[1] ;
+ 
+(*END_PHRASE*)
+END_FUNCTION_BLOCK

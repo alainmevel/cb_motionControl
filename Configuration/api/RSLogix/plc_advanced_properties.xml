@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<properties_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:xsd/properties.xsd">
+	<properties_set>
+		<languages><language NAME="EN">External generator properties</language><language NAME="FR">Propriétés du générateur externe</language></languages>
+		<!--property NAME="flatGenerationOld" TYPE="boolean">
+			<languages><language NAME="EN">Flat generation</language><language NAME="FR">Génération à plat</language></languages>
+			<applied_to class="PLCTrans"/>
+		</property-->
+		<!--property NAME="allFBPins" TYPE="boolean">
+			<languages><language NAME="EN">Require for UFB</language><language NAME="FR">Requis pour les BFU</language></languages>
+			<applied_to class="PLCTrans"/>
+		</property-->
+		<property NAME="noIntermediateLevel" TYPE="boolean">
+			<languages><language NAME="EN">No intermediate level of MAC</language><language NAME="FR">Pas de niveau intermédiaire pour les MACs</language></languages>
+			<applied_to class="PLCTrans"/>
+		</property>
+	</properties_set>
+	<properties_set>
+		<languages><language NAME="EN">Hardware properties</language><language NAME="FR">Propriétés de la configuration matérielle</language></languages>
+		<property NAME="rackName" TYPE="string" DEFAULT="EXT">
+			<languages>
+				<language NAME="EN">Rack Name</language>
+				<language NAME="FR">Nom du rack</language>
+			</languages>
+			<APPLIED_TO CLASS="plcExtendedRack" />
+		</property>
+	</properties_set>
+</properties_file>

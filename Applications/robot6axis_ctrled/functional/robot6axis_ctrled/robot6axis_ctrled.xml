@@ -1,0 +1,1901 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-04T11:04:01-01:00" />
+	<contentHeader name="robot6axis_ctrled">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="robot6axis_ctrled.robot6axis_ctrled" pouType="program">
+				<interface>
+					<inputVars>
+						<variable name="armOrigin">
+							<type>
+								<array>
+									<dimension lower="1" upper="3" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value>
+										<simpleValue value="800.0" />
+									</value>
+									<value>
+										<simpleValue value="400.0" />
+									</value>
+									<value>
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>x, y, z : 3D position of arm origin</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8cb41143-c3ab-4cdf-9c7c-5a01d7b8af17</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="profileNr">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Choice of the profile number  - 0 Rest 1 constant 2 acceleration 3 deceleration</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>af155590-6a7e-45f1-9bdc-970e78ce3108</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="HomeCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>home command</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c2dad8ff-9ef1-44d4-a43a-9188db5f10ba</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveVelCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>velocity command</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>13ff43e0-e234-4219-abac-dfb554b18901</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveAbsCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>move command</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8044d7e7-1b78-41a4-a68e-37bcf7c27653</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveVel1ManualCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Simulation operator velocity start</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>529473aa-c3a5-45ac-b3da-9015fe24e3d6</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveVel2ManualCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Simulation operator velocity start</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d7a11db0-7311-4bc8-a1e5-c29f0e158275</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveAbs1ManualCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Simulation operator positioning1 start</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>4c421667-e187-4826-93f2-9227e29f9ca1</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveAbs2ManualCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Simulation operator positioning2 start (not used)</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f75e4ef7-4044-41b5-8a7a-7a8d8cd65919</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="StopCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>move command</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>88c25e45-8274-436a-9a54-20e6adecfdb4</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MovePosition">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Target position in length or degree</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d3c5b53d-08f8-42d6-a3cd-a34b0f5ed562</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveSpeed">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="100.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Speed in % of MAX_SPEED</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>ca16efb5-d4e5-4ea6-a76b-c4e8d68715ae</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveAcceleration">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="100.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Acceleration in % of MAX_ACCEL</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>bf101cea-32a0-4d25-92f0-8d4780fb075f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveDeceleration">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="100.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Deceleration in % of MAX_DECEL</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c1369199-467e-4833-bf74-a96833a39688</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="offsetAxToMa">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>For modification of reference position. Value to add to the (Ma)chine position to get the (Ax)is poisition</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>adce2bf5-b5a1-4138-a036-aab04520c92f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="gripSyringes">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value> function of the arm is active</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>49dd1e37-064a-4ae5-8e34-c6f83c1e2861</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>orders</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="Auto">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Auto PLC Mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>47e53e20-ac4b-4e10-9d33-9dab22c2f02a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="Manu">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Manual mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>ecf6da42-91a3-401c-b291-1b2b9e1e55d9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="run">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>86017858-f91f-44bd-a6df-1f85aa40505b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Modes</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="armExtrem">
+							<type>
+								<array>
+									<dimension lower="1" upper="3" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="3">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>x, y, z : 3D position of arm extremity</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>10166192-7a7d-4758-8866-de1d12d0df7b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="velX">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>50bb86bf-b661-49c6-98c4-f4a46785d084</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="velY">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>82da9319-716f-407c-8d80-1f4e027cacef</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="velZ">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>4934b80d-10ae-4beb-9892-f4a147a8c624</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="armInStop">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f96950f7-0043-419a-80e5-899d78356b76</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>PositionAndVelocity</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="masterPosition">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1c48944d-87d8-4769-b630-0c7869e0de1a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ActualPositionAx">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Current position in axis units (mm or degree)</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>be7d4d4f-5f1f-498a-a7cb-b284bf797091</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>orders,,Modes,</value>
+						</data>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>PositionAndVelocity,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<inVariable localId="0">
+							<position x="984" y="168" />
+							<expression>armOrigin</expression>
+						</inVariable>
+						<inVariable localId="1">
+							<position x="336" y="384" />
+							<expression>profileNr</expression>
+						</inVariable>
+						<inVariable localId="2">
+							<position x="320" y="432" />
+							<expression>HomeCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="3">
+							<position x="320" y="456" />
+							<expression>MoveVelCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="4">
+							<position x="320" y="480" />
+							<expression>MoveAbsCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="5">
+							<position x="320" y="504" />
+							<expression>MoveVel1ManualCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="6">
+							<position x="320" y="528" />
+							<expression>MoveVel2ManualCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="7">
+							<position x="320" y="552" />
+							<expression>MoveAbs1ManualCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="8">
+							<position x="320" y="576" />
+							<expression>MoveAbs2ManualCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="9">
+							<position x="320" y="600" />
+							<expression>StopCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="10">
+							<position x="320" y="624" />
+							<expression>MovePosition</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="11">
+							<position x="320" y="648" />
+							<expression>MoveSpeed</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="12">
+							<position x="320" y="672" />
+							<expression>MoveAcceleration</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="13">
+							<position x="320" y="696" />
+							<expression>MoveDeceleration</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="14">
+							<position x="320" y="720" />
+							<expression>offsetAxToMa</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="15">
+							<position x="936" y="600" />
+							<expression>gripSyringes</expression>
+						</inVariable>
+						<inVariable localId="16">
+							<position x="320" y="744" />
+							<expression>gripSyringes</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>336,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="17">
+							<position x="888" y="216" />
+							<expression>Auto</expression>
+						</inVariable>
+						<outVariable localId="18">
+							<position x="1504" y="360" />
+							<connectionPointIn>
+								<connection refLocalId="19" formalParameter="armExtrem" />
+							</connectionPointIn>
+							<expression>armExtrem</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>PositionAndVelocity</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1488,336</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>19.PositionAndVelocity,PositionAndVelocity</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="20">
+							<position x="1504" y="384" />
+							<connectionPointIn>
+								<connection refLocalId="19" formalParameter="velX" />
+							</connectionPointIn>
+							<expression>velX</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>PositionAndVelocity</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1488,336</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>19.PositionAndVelocity,PositionAndVelocity</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="21">
+							<position x="1504" y="408" />
+							<connectionPointIn>
+								<connection refLocalId="19" formalParameter="velY" />
+							</connectionPointIn>
+							<expression>velY</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>PositionAndVelocity</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1488,336</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>19.PositionAndVelocity,PositionAndVelocity</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="22">
+							<position x="1504" y="432" />
+							<connectionPointIn>
+								<connection refLocalId="19" formalParameter="velZ" />
+							</connectionPointIn>
+							<expression>velZ</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>PositionAndVelocity</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1488,336</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>19.PositionAndVelocity,PositionAndVelocity</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="23">
+							<position x="1504" y="456" />
+							<connectionPointIn>
+								<connection refLocalId="19" formalParameter="armInStop" />
+							</connectionPointIn>
+							<expression>armInStop</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>PositionAndVelocity</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1488,336</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>19.PositionAndVelocity,PositionAndVelocity</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="24">
+							<position x="816" y="552" />
+							<connectionPointIn>
+								<connection refLocalId="25" formalParameter="masterPosition" />
+							</connectionPointIn>
+							<expression>masterPosition</expression>
+						</outVariable>
+						<outVariable localId="26">
+							<position x="816" y="528" />
+							<connectionPointIn>
+								<connection refLocalId="25" formalParameter="ActualPositionAx" />
+							</connectionPointIn>
+							<expression>ActualPositionAx</expression>
+						</outVariable>
+						<block localId="25" width="400" height="456" typeName="robot6axis_ctrled.robot6axis_cams" instanceName="robot6axis_cams">
+							<position x="380" y="336" />
+							<inputVariables>
+								<variable formalParameter="profileNr">
+									<connectionPointIn>
+										<connection refLocalId="1">
+											<position x="344" y="384" />
+											<position x="348" y="384" />
+											<position x="348" y="384" />
+											<position x="380" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="HomeCmd">
+									<connectionPointIn>
+										<connection refLocalId="2">
+											<position x="328" y="432" />
+											<position x="348" y="432" />
+											<position x="348" y="432" />
+											<position x="380" y="432" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVelCmd">
+									<connectionPointIn>
+										<connection refLocalId="3">
+											<position x="328" y="456" />
+											<position x="347" y="456" />
+											<position x="347" y="456" />
+											<position x="380" y="456" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbsCmd">
+									<connectionPointIn>
+										<connection refLocalId="4">
+											<position x="328" y="480" />
+											<position x="346" y="480" />
+											<position x="346" y="480" />
+											<position x="380" y="480" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel1ManualCmd">
+									<connectionPointIn>
+										<connection refLocalId="5">
+											<position x="328" y="504" />
+											<position x="345" y="504" />
+											<position x="345" y="504" />
+											<position x="380" y="504" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel2ManualCmd">
+									<connectionPointIn>
+										<connection refLocalId="6">
+											<position x="328" y="528" />
+											<position x="344" y="528" />
+											<position x="344" y="528" />
+											<position x="380" y="528" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs1ManualCmd">
+									<connectionPointIn>
+										<connection refLocalId="7">
+											<position x="328" y="552" />
+											<position x="343" y="552" />
+											<position x="343" y="552" />
+											<position x="380" y="552" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs2ManualCmd">
+									<connectionPointIn>
+										<connection refLocalId="8">
+											<position x="328" y="576" />
+											<position x="343" y="576" />
+											<position x="343" y="576" />
+											<position x="380" y="576" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="StopCmd">
+									<connectionPointIn>
+										<connection refLocalId="9">
+											<position x="328" y="600" />
+											<position x="342" y="600" />
+											<position x="342" y="600" />
+											<position x="380" y="600" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MovePosition">
+									<connectionPointIn>
+										<connection refLocalId="10">
+											<position x="328" y="624" />
+											<position x="341" y="624" />
+											<position x="341" y="624" />
+											<position x="380" y="624" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveSpeed">
+									<connectionPointIn>
+										<connection refLocalId="11">
+											<position x="328" y="648" />
+											<position x="341" y="648" />
+											<position x="341" y="648" />
+											<position x="380" y="648" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAcceleration">
+									<connectionPointIn>
+										<connection refLocalId="12">
+											<position x="328" y="672" />
+											<position x="340" y="672" />
+											<position x="340" y="672" />
+											<position x="380" y="672" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveDeceleration">
+									<connectionPointIn>
+										<connection refLocalId="13">
+											<position x="328" y="696" />
+											<position x="340" y="696" />
+											<position x="340" y="696" />
+											<position x="380" y="696" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="offsetAxToMa">
+									<connectionPointIn>
+										<connection refLocalId="14">
+											<position x="328" y="720" />
+											<position x="339" y="720" />
+											<position x="339" y="720" />
+											<position x="380" y="720" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="name1">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="name2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="name3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="name4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="name5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="name6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="name1_rej">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="name2_rej">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="name3_rej">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="name4_rej">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="name5_rej">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="name6_rej">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="slavePosition1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="slavePosition2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="slavePosition3">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="slavePosition4">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="slavePosition5">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="slavePosition6">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="ActualPositionAx">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="masterPosition">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>orders:336@408,orders</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>4f72a7fb-a159-407d-9d70-307391dbf61a</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="19" width="432" height="792" typeName="motion_lib.robot6axis" instanceName="robot6axis">
+							<position x="1008" y="120" />
+							<inputVariables>
+								<variable formalParameter="armOrigin">
+									<connectionPointIn>
+										<connection refLocalId="0">
+											<position x="992" y="168" />
+											<position x="1000" y="168" />
+											<position x="1000" y="168" />
+											<position x="1008" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotVectorFOOT">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotDegFOOT">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="ownRotDegFOOT">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotVectorFOOT2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotDegFOOT2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotVectorArm2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotDegArm2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="driveRotVector1">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="driveRotVector2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="driveRotVector3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="driveRotVector4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="driveRotVector5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="driveRotVector6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotVector1RowA">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotDeg1RowA">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotVector1RowB">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotDeg1RowB">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotVectorMultiRowsA">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotDegMultiRowsA">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotVectorMultiRowsB">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="structRotDegMultiRowsB">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="HomeCmd">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVelCmd">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbsCmd">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel1ManualCmd">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel2ManualCmd">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs1ManualCmd">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs2ManualCmd">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="StopCmd">
+									<connectionPointIn>
+										<connection refLocalId="17">
+											<position x="896" y="216" />
+											<position x="923" y="216" />
+											<position x="923" y="216" />
+											<position x="1008" y="216" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MovePosition">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveSpeed">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAcceleration">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveDeceleration">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="offsetAxToMa">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="HomeCmd2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVelCmd2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbsCmd2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel1ManualCmd2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel2ManualCmd2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs1ManualCmd2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs2ManualCmd2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="StopCmd2">
+									<connectionPointIn>
+										<connection refLocalId="17">
+											<position x="896" y="216" />
+											<position x="921" y="216" />
+											<position x="921" y="240" />
+											<position x="1008" y="240" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MovePosition2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveSpeed2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAcceleration2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveDeceleration2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="offsetAxToMa2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="HomeCmd3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVelCmd3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbsCmd3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel1ManualCmd3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel2ManualCmd3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs1ManualCmd3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs2ManualCmd3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="StopCmd3">
+									<connectionPointIn>
+										<connection refLocalId="17">
+											<position x="896" y="216" />
+											<position x="918" y="216" />
+											<position x="918" y="264" />
+											<position x="1008" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MovePosition3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveSpeed3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAcceleration3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveDeceleration3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="offsetAxToMa3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="HomeCmd4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVelCmd4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbsCmd4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel1ManualCmd4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel2ManualCmd4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs1ManualCmd4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs2ManualCmd4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="StopCmd4">
+									<connectionPointIn>
+										<connection refLocalId="17">
+											<position x="896" y="216" />
+											<position x="916" y="216" />
+											<position x="916" y="288" />
+											<position x="1008" y="288" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MovePosition4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveSpeed4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAcceleration4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveDeceleration4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="offsetAxToMa4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="HomeCmd5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVelCmd5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbsCmd5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel1ManualCmd5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel2ManualCmd5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs1ManualCmd5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs2ManualCmd5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="StopCmd5">
+									<connectionPointIn>
+										<connection refLocalId="17">
+											<position x="896" y="216" />
+											<position x="913" y="216" />
+											<position x="913" y="312" />
+											<position x="1008" y="312" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MovePosition5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveSpeed5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAcceleration5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveDeceleration5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="offsetAxToMa5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="HomeCmd6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVelCmd6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbsCmd6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel1ManualCmd6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveVel2ManualCmd6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs1ManualCmd6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAbs2ManualCmd6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="StopCmd6">
+									<connectionPointIn>
+										<connection refLocalId="17">
+											<position x="896" y="216" />
+											<position x="911" y="216" />
+											<position x="911" y="336" />
+											<position x="1008" y="336" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MovePosition6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveSpeed6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveAcceleration6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="MoveDeceleration6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="offsetAxToMa6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusReady">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusMoved">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusStand">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualPositionAx">
+									<connectionPointIn>
+										<connection refLocalId="25" formalParameter="slavePosition1">
+											<position x="780" y="384" />
+											<position x="917" y="384" />
+											<position x="917" y="384" />
+											<position x="1008" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualPositionMa">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualVelocity">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusReady2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusMoved2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusStand2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualPositionAx2">
+									<connectionPointIn>
+										<connection refLocalId="25" formalParameter="slavePosition2">
+											<position x="780" y="408" />
+											<position x="912" y="408" />
+											<position x="912" y="408" />
+											<position x="1008" y="408" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualPositionMa2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualVelocity2">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusReady3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusMoved3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusStand3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualPositionAx3">
+									<connectionPointIn>
+										<connection refLocalId="25" formalParameter="slavePosition3">
+											<position x="780" y="432" />
+											<position x="908" y="432" />
+											<position x="908" y="432" />
+											<position x="1008" y="432" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualPositionMa3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualVelocity3">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusReady4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusMoved4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusStand4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualPositionAx4">
+									<connectionPointIn>
+										<connection refLocalId="25" formalParameter="slavePosition4">
+											<position x="780" y="456" />
+											<position x="903" y="456" />
+											<position x="903" y="456" />
+											<position x="1008" y="456" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualPositionMa4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualVelocity4">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusReady5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusMoved5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusStand5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualPositionAx5">
+									<connectionPointIn>
+										<connection refLocalId="25" formalParameter="slavePosition5">
+											<position x="780" y="480" />
+											<position x="898" y="480" />
+											<position x="898" y="480" />
+											<position x="1008" y="480" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualPositionMa5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualVelocity5">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusReady6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusMoved6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_StatusStand6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualPositionAx6">
+									<connectionPointIn>
+										<connection refLocalId="25" formalParameter="slavePosition6">
+											<position x="780" y="504" />
+											<position x="893" y="504" />
+											<position x="893" y="504" />
+											<position x="1008" y="504" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualPositionMa6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PLC_ActualVelocity6">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="gripSyringes">
+									<connectionPointIn>
+										<connection refLocalId="15">
+											<position x="944" y="600" />
+											<position x="988" y="600" />
+											<position x="988" y="528" />
+											<position x="1008" y="528" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="ActualVelocity1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="ActualVelocity2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="ActualVelocity3">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="ActualVelocity4">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="ActualVelocity5">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="ActualVelocity6">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="armExtrem">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="velX">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="velY">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="velZ">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="armInStop">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionOut" handleUnknown="preserve">
+									<value>PositionAndVelocity,PositionAndVelocity:1488@336</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>88406709-3e72-4ec9-94c4-ea65e451bb07</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+					<documentation>
+						<xhtml:pre>CB.group=orders,336,408
+CB.group=PositionAndVelocity,1488,336
+</xhtml:pre>
+					</documentation>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

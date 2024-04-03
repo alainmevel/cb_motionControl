@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-04T11:03:52-01:00" />
+	<contentHeader name="trigger_function">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="motion_lib.trigger_function" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="armExtrem">
+							<type>
+								<array>
+									<dimension lower="1" upper="3" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="3">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>x, y, z : 3D position of arm extremity</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>dbfb668e-accd-42e9-9cff-01bede899efe</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="productId">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="-1" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Id of the product in interaction</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c22b31dc-850e-4c40-ad6b-da21c08c1327</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="velX">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>587f6914-1e6b-4d67-a8b6-df14f20d8ae0</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="velY">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7727ce5c-4872-4cb6-8780-0ab9fb5ef54e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="velZ">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>23e0db4a-a406-4489-9666-20f9ae444b05</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="armInStop">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c77b08ef-ed10-40e5-9028-8cf46d925d1b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<localVars>
+						<variable name="armExtrem1">
+							<type>
+								<array>
+									<dimension lower="1" upper="3" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="3">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>x, y, z : 3D position of arm extremity</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>688f6353-fbc2-4874-93b3-88c912ed7e76</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="i">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>fc815cf4-3965-42a2-805f-6bdbda0c8c78</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="productTimeDetect">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5cf30ca4-8452-4417-9234-27dcf94149dd</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="productDetected">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>19fe2b3c-1465-42b4-b730-fd68258576c8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="productId1">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="-1" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Id of the product in interaction</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8f28a010-7ecf-4d4e-926d-4267ba0a6c61</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="actionTake">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>468cd009-6a87-4ee7-8c2d-c89b02889742</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="activeArea">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>47a92ccf-971b-42e9-902a-66ac4c871cce</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars constant="true">
+						<variable name="ACTIVE_AREA_Z">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="1100.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>be524da0-3911-4058-8cac-73f9feec402d</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="TEMPO_DETECTION_PRO">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.2" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d916fdaa-7598-47b3-92aa-5f2de3553afb</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>parameterVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+					</addData>
+				</interface>
+				<actions>
+					<action name="C_source_code">
+						<body>
+							<ST>
+if (productId1 == -1 &amp;&amp; productId != -1) 
+&#9;productTimeDetect = 0;
+
+if (productId != -1) 
+&#9;productTimeDetect += CLOCK_PERIOD / 1000000;
+
+if (productTimeDetect &gt; TEMPO_DETECTION_PRO) productDetected = 1; else productDetected = 0;
+
+velX = 1000000 * (armExtrem(1) - armExtrem1(1)) / CLOCK_PERIOD; // mm/s
+velY = 1000000 * (armExtrem(2) - armExtrem1(2)) / CLOCK_PERIOD;
+velZ = 1000000 * (armExtrem(3) - armExtrem1(3)) / CLOCK_PERIOD;
+
+armInStop = (fabs(velX) &lt; 10 &amp;&amp; fabs(velY) &lt; 10 &amp;&amp; velZ &lt; -50);
+
+
+
+for (i = 1; i &lt;= 3; i++)
+&#9;armExtrem1(i) = armExtrem(i);
+
+productId1 = productId;
+</ST>
+						</body>
+					</action>
+				</actions>
+				<addData>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

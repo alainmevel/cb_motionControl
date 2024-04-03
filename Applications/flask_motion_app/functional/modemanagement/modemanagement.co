@@ -1,0 +1,10 @@
+ bpStart IB1
+ bpAuto IB2
+ bpManu IB3
+ bpEmergencyStop IB4
+ bpStop IB5
+ Auto OB6
+ Manu OB7
+ run OB8
+ rs1_Q1 LB9
+ rs1_i_rs LI10

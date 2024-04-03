@@ -1,0 +1,31 @@
+[SOURCE_UNIT]
+SU_TYPE = F_B
+NAME = 'DEFAULT'
+VERSION = '00.18'
+DATE = DATE_AND_TIME #2006-08-17-17:20:27
+LANGUAGE = ST
+BODY = 
+(*Auteur : TNI-Software*)
+FUNCTION_BLOCK Sub_tod_t
+VAR_INPUT
+En : BOOL (*Reserved*) := TRUE;
+In0 : AR_D : 1;
+In1 : AR_D : 2;
+END_VAR
+VAR_OUTPUT
+Out0 : AR_D : 1 := ( 0 ) ;
+END_VAR
+VAR
+Inter : DWORD := 0;
+END_VAR
+(*PHRASE*)
+(* difference of ms  *)
+Inter :=In0[0] - In1[1];
+IF Inter < 0 THEN 
+	Out0[0] := Inter + 864000000;
+ELSE
+	Out0[0] := Inter;
+END_IF;
+
+(*END_PHRASE*)
+END_FUNCTION_BLOCK

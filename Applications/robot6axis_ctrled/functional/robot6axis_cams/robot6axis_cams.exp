@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="robot6axis_cams" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" COMPONENT_CLASS_UUID="" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{{0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, 0, {{0, 0, 0}, {0, 0, 0}}}
+};
+T_Instance NbActeurs = 0;
+T_Instance NbProduits = 0;
+T_Instance NbActeursEtProduits = 0;
+
+void globalesInit()
+{
+}" SIGNATURE="2147483647" GENERATION_DATE="1590589378" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good" SIMU_PERIOD="20000" ANIMATION_PERIOD="15000" SCENARIO_PERIOD="250000" PLMId="">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
+			<CHILDREN>
+&#9;&#9;&#9;
+				<NODE NAME="servo_kinetix2" MODEL_PATH="Standard\motion_control\servo" />
+&#9;&#9;&#9;
+				<NODE NAME="cam_profile1" MODEL_PATH="Specific\motion_lib\cam_profile">
+&#9;&#9;&#9;&#9;
+					<NODE NAME="cam_profile7" MODEL_PATH="Specific\motion_lib\cam_profile">
+&#9;&#9;&#9;&#9;&#9;
+						<NODE NAME="cam_computation1" MODEL_PATH="Specific\motion_lib\cam_computation">
+&#9;&#9;&#9;&#9;&#9;&#9;
+							<NODE NAME="cam_profile2" MODEL_PATH="Specific\motion_lib\cam_profile">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+								<NODE NAME="cam_profile8" MODEL_PATH="Specific\motion_lib\cam_profile">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+									<NODE NAME="cam_computation2" MODEL_PATH="Specific\motion_lib\cam_computation">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+										<NODE NAME="cam_profile3" MODEL_PATH="Specific\motion_lib\cam_profile">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+											<NODE NAME="cam_profile9" MODEL_PATH="Specific\motion_lib\cam_profile">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+												<NODE NAME="cam_computation3" MODEL_PATH="Specific\motion_lib\cam_computation">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+													<NODE NAME="cam_profile4" MODEL_PATH="Specific\motion_lib\cam_profile">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+														<NODE NAME="cam_profile10" MODEL_PATH="Specific\motion_lib\cam_profile">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+															<NODE NAME="cam_computation4" MODEL_PATH="Specific\motion_lib\cam_computation">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+																<NODE NAME="cam_profile5" MODEL_PATH="Specific\motion_lib\cam_profile">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+																	<NODE NAME="cam_profile11" MODEL_PATH="Specific\motion_lib\cam_profile">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+																		<NODE NAME="cam_computation5" MODEL_PATH="Specific\motion_lib\cam_computation">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+																			<NODE NAME="cam_profile6" MODEL_PATH="Specific\motion_lib\cam_profile">
+																				<NODE NAME="cam_profile12" MODEL_PATH="Specific\motion_lib\cam_profile">
+																					<NODE NAME="cam_computation6" MODEL_PATH="Specific\motion_lib\cam_computation" /></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>

@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-04T11:03:57-01:00" />
+	<contentHeader name="product_creator">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="motion_control.product_creator" pouType="functionBlock">
+				<interface>
+					<localVars>
+						<variable name="status_act_prod">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0be96061-b28a-4e69-b4b1-154f347400d1</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m11">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="1.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b1948607-9b4b-47eb-aa49-e9ae41b822f7</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m12">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7e4e8f2a-78ae-413b-a1b0-99ec122e878f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m13">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>4b5998e3-d113-4623-8339-bf7ecf645606</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m14">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0ac270ad-3f3e-4bf7-9237-b83726a519db</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m21">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>23e302d0-6535-42dd-a6a7-50db4f4a940e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m22">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="1.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>44e9239e-9135-4559-9171-33e5d3973b08</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m23">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>ff7cc036-7880-4015-a3e6-f3bf601572a8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m24">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>cae3ccbc-40d4-4d7b-963b-28139ae4851d</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m31">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6566589e-09f0-4574-ae75-ecf42c5c7cd9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m32">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b0a05980-8976-4096-8c80-63877728f7c7</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m33">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="1.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a0dadba1-24e4-4a1a-b868-2888e2be6ec0</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m34">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>edc7ebac-0abb-430f-bd94-32b3873b9fb9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m41">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>37d613d4-3d03-4096-9122-7b98a13da2a9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m42">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>671bd2d7-4b7a-4d95-868d-c4c91a884157</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m43">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>039c4f9c-1c60-4e10-b3ff-1d5e7d289ea9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="m44">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="1.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0baf2a98-7147-404f-83be-9dd1e4215f70</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="pbCreation">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f79076da-eec3-443c-83b8-6b973e573740</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="productPresence">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>222467fa-28be-4ae5-bff3-147cf6faa5e8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="idProd">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c130e715-3d4d-4c4c-867b-a0057c79b6f4</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="cntProd">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>4f99227f-7671-4e55-8197-ce07a2f86406</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="waitingTime">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="10.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>113bc83c-85a2-4a87-a4f1-a171b820c3f8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="oldIdProd">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2d0c47e4-3cec-4c7e-bb6e-78ae33049acd</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars>
+						<variable name="empty1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a305b1c2-2001-46b2-93ba-3c32e1a32a98</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="empty2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d5cdd706-bf4e-4377-9a37-73a3f8960278</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="empty3">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>3b8aa03d-d706-4537-972b-e03a72861787</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="empty4">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>bf83777f-9f1e-402a-bb73-89489a05cb83</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="empty5">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c4ea61ed-ca9a-424a-810c-500be53a487f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="empty6">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>28518e5b-43ca-4dab-a669-99d65da708b2</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="empty7">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>73f07924-6ce6-4eaa-bd01-2cfe716aa5d0</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="empty8">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>009ad2af-7270-4825-9697-40f195324e93</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>empty</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars constant="true">
+						<variable name="gravitySpeed">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.1" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>9148c199-5b98-4c3f-963d-df9e70baf81e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="nbProdToCreate">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="1" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>302678c2-793e-4200-8403-c880493aac57</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="pulsedMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>fcc91012-e72b-4d67-a7cd-75722ef0a287</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="pulseTime">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="10.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f28114bb-5d68-4d3a-9dc4-814c22808e1a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="alignProductsToZ">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>e3db4f72-85e2-4753-a030-2f9845a11ff8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="alignProductsToY">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0bffc3d7-42f3-4cfd-af21-753469fca763</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="alignProductsToX">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>785a5d96-0514-449b-9814-7f70fa6d9a4d</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>parameterVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+					</addData>
+				</interface>
+				<actions>
+					<action name="C_source_code">
+						<body>
+							<ST>/* ----------------------------------------------------------------&#9;*/
+/* Type : Model of Operative Behaviour&#9;&#9;&#9;&#9;&#9;*/
+/* Category :  Actors and Products&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Author : Dassault Systemes&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Update date : June 2021&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+/* This module simulates the creation of products.&#9;&#9;&#9;*/
+/* The creation can be :&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* - pulsed&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* - automatic and cyclic&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+
+
+int i;
+ 
+if (!  pulsedMode) {
+&#9;waitingTime += CLOCK_PERIOD / 1000000.0;
+&#9;if (productPresence) waitingTime = 0.0;
+}
+
+/* ----------------------------------------------------------------&#9;*/
+/* Request for creation of a product at the same location that the&#9;*/
+/* creation module.&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* To avoid inopportune stacking, the creation of a new product is&#9;*/
+/* forbidden when there is already one in the creation area.&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+
+if ((pbCreation ||  ((waitingTime&gt;= pulseTime) &amp;&amp; ! pulsedMode)) &amp;&amp; ! productPresence) {
+&#9;waitingTime = 0.0;
+&#9;for (i=0;i&lt;nbProdToCreate;i++) {
+&#9;&#9;if (alignProductsToX) {
+&#9;&#9;&#9;idProd=prodNew(motion_control__product, getPositionX(myself), getPositionY(myself), getPositionZ(myself), getSizeX(myself)/2.0, getSizeY(myself), getSizeZ(myself));
+&#9;&#9;&#9;if (idProd &gt;= 0)
+&#9;&#9;&#9;&#9;rotateTo(idProd, getAngleX(myself), getAngleY(myself), getAngleZ(myself), getPositionX(idProd), getPositionY(idProd),getPositionZ(idProd));
+&#9;&#9;&#9;if (i&gt;0) moveRelativeAnotherXBy(idProd, oldIdProd , (getSizeX(myself)*i));
+
+&#9;&#9;&#9;oldIdProd = idProd;
+&#9;&#9;}
+
+&#9;&#9;if (alignProductsToY) {
+&#9;&#9;&#9;idProd=prodNew(motion_control__product, getPositionX(myself), getPositionY(myself), getPositionZ(myself), getSizeX(myself)/2.0, getSizeY(myself), getSizeZ(myself));
+&#9;&#9;&#9;if (idProd &gt;= 0)
+&#9;&#9;&#9;&#9;rotateTo(idProd, getAngleX(myself), getAngleY(myself), getAngleZ(myself), getPositionX(idProd), getPositionY(idProd),getPositionZ(idProd));
+&#9;&#9;&#9;if (i&gt;0) moveRelativeAnotherYBy(idProd, oldIdProd , (getSizeY(myself)*i));
+&#9;&#9;&#9;oldIdProd = idProd;
+&#9;&#9;}
+&#9;&#9;if (alignProductsToZ) {
+&#9;&#9;&#9;idProd=prodNew(motion_control__product, getPositionX(myself), getPositionY(myself), getPositionZ(myself)+(getSizeZ(myself)*i), getSizeX(myself)/2.0, getSizeY(myself), getSizeZ(myself));
+&#9;&#9;&#9;if (idProd &gt;= 0)
+&#9;&#9;&#9;&#9;rotateTo(idProd, getAngleX(myself), getAngleY(myself), getAngleZ(myself), getPositionX(idProd), getPositionY(idProd),getPositionZ(idProd));
+&#9;&#9;}
+&#9;&#9;
+&#9;&#9;if (idProd &gt;= 0) {
+&#9;&#9;&#9;cntProd++;
+&#9;&#9;&#9;var(idProd, motion_control__product__gravitySpeed ) = gravitySpeed;
+&#9;&#9;&#9;var(idProd, motion_control__product__number ) = cntProd;
+&#9;&#9;&#9;var(idProd, motion_control__product__empty1 ) = empty1 ;
+&#9;&#9;&#9;var(idProd, motion_control__product__empty2 ) = empty2 ;
+&#9;&#9;&#9;var(idProd, motion_control__product__empty3 ) = empty3 ;
+&#9;&#9;&#9;var(idProd, motion_control__product__empty4 ) = empty4 ;
+&#9;&#9;&#9;var(idProd, motion_control__product__empty5 ) = empty5 ;
+&#9;&#9;&#9;var(idProd, motion_control__product__empty6 ) = empty6 ;
+&#9;&#9;&#9;var(idProd, motion_control__product__empty7 ) = empty7 ;
+&#9;&#9;&#9;var(idProd, motion_control__product__empty8 ) = empty8 ;
+&#9;&#9;}
+&#9;}
+}
+
+
+/* ----------------------------------------------------------------&#9;*/
+/* Reset information on product presence&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+productPresence=0;
+
+/* ----------------------------------------------------------------&#9;*/
+/* Reset of the manual request for creation&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+pbCreation=0;</ST>
+						</body>
+					</action>
+					<action name="C_header">
+						<body>
+							<ST>#include &quot;motion_control/functional/product/product.h&quot;
+
+</ST>
+						</body>
+					</action>
+				</actions>
+				<addData>
+					<data name="Geensys.CB.Actor" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+				<documentation>
+					<xhtml:pre>This module simulates the creation of products.
+The creation can be :
+- pulsed 
+- automatic and cyclic </xhtml:pre>
+				</documentation>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="servo_mode" COMMENTS="This module managed the priority between local and remote commands" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" COMPONENT_CLASS_UUID="" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{{0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, 0, {{0, 0, 0}, {0, 0, 0}}}
+};
+T_Instance NbActeurs = 0;
+T_Instance NbProduits = 0;
+T_Instance NbActeursEtProduits = 0;
+
+void globalesInit()
+{
+}" SIGNATURE="2147483647" GENERATION_DATE="1594116181" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good" PLMId="">
+	<MODEL_REQUIREMENTS>
+		<FUNCTIONAL_TREE TYPE="c" />
+	</MODEL_REQUIREMENTS>
+	<externalSrcs />
+</CB_COMPONENT>

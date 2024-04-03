@@ -1,0 +1,31 @@
+[HEADER]
+DATE = date #2006-08-18
+STANDARD = 'PLCopen  v0.1 1993'
+SENDER = 'Schneider Automation S.A.S. PL7 PRO V4.4'
+[APPLICATION]
+NAME = 'STATION'
+DATE = date_and_time#2006-08-18-09:05:39
+VERSION = '0.0'
+[SOURCE_UNIT]
+SU_TYPE = F_B
+NAME = 'DEFAULT'
+VERSION = '00.21'
+DATE = DATE_AND_TIME #2006-08-17-15:28:20
+LANGUAGE = ST
+BODY = 
+(*Auteur : TNI-Software*)
+FUNCTION_BLOCK Eq_tod
+VAR_INPUT
+En : BOOL (*Reserved*) := TRUE;
+In0 : AR_D : 1;
+In1 : AR_D : 1;
+END_VAR
+VAR_OUTPUT
+Out0 : BOOL := FALSE;
+END_VAR
+(*PHRASE*)
+(* compare time  *)
+Out0 := (In0[0] = In1[0]);
+(*END_PHRASE*)
+END_FUNCTION_BLOCK
+[EOF]

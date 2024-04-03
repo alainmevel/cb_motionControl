@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-04T11:03:50-01:00" />
+	<contentHeader name="cam_computation">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="motion_lib.cam_computation" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="profileNr">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Select the profile number</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>22d49d87-4a78-491c-9b16-ae96860c73de</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MasterPositionIn">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Current position in axis units (mm or degree)</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>eb31624c-4a99-44e3-8c0a-ed777e87982d</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="nbPoints0">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Number of points managed in the table</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>66aabcaf-7288-4ba4-846f-ed237e755d61</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MasterPoints0">
+							<type>
+								<array>
+									<dimension lower="1" upper="100" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="100">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Master values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>97266c15-ffcc-496d-bf35-b6ea770e11ee</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="SlavePoints0">
+							<type>
+								<array>
+									<dimension lower="1" upper="100" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="100">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Slave values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>572cde88-b2b5-47bc-b34e-3a4cd4568147</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="pointer0">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Memory pointer on camTableStruct</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>e0f12557-af0e-45a8-920c-84d4a1e4f560</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>param0</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="nbPoints1">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Number of points managed in the table</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b2ed2926-6661-4e84-9307-eaebcfe4697a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MasterPoints1">
+							<type>
+								<array>
+									<dimension lower="1" upper="100" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="100">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Master values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0fbeadb1-0810-49e0-afc6-cbd692820f07</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="SlavePoints1">
+							<type>
+								<array>
+									<dimension lower="1" upper="100" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="100">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Slave values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1f09ce46-f917-4541-b01a-da7181ddc871</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="pointer1">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Memory pointer on camTableStruct</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c05f9cb1-bbe9-49ce-9884-ff9566cfe51c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>param1</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="nbPoints2">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Number of points managed in the table</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2ba749b8-fdba-449a-8d23-7a3bad0b49d4</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MasterPoints2">
+							<type>
+								<array>
+									<dimension lower="1" upper="100" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="100">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Master values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>097aa2f2-aedf-4126-bde8-9dc37ab258f3</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="SlavePoints2">
+							<type>
+								<array>
+									<dimension lower="1" upper="100" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="100">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Slave values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>9e0b95e3-8730-40f7-9f78-4ac6a48c064e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="pointer2">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Memory pointer on camTableStruct</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>513fd4fc-0deb-470b-a756-681fd6bb1030</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>param2</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="nbPoints3">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Number of points managed in the table</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>115f002c-3241-4621-9574-1851fcd713cb</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MasterPoints3">
+							<type>
+								<array>
+									<dimension lower="1" upper="100" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="100">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Master values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>bf1ec852-a431-4d40-8b47-4b2c7e573f85</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="SlavePoints3">
+							<type>
+								<array>
+									<dimension lower="1" upper="100" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="100">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Slave values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>9513c7d8-cb4f-4fc1-b08e-cf39c67f8805</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="pointer3">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Memory pointer on camTableStruct</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1d38a3bd-5f50-4ed5-915f-1e025a56aa1f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>param3</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="slavePosition">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Computed slave position</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>907f39fd-0e0c-4024-8e50-e8c137808332</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="masterPosition">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Master position - applying modulo transformation</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2015d279-aafa-45e5-bd46-822adf21ad76</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<localVars>
+						<variable name="i">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1e9504ed-264e-4dec-b80e-1f27553b2211</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="modulo">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Modulo = max range of master table values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8465b49b-befb-4936-bfd4-7442c659a50c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="divider">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Divider for modulo computation</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>9154930d-29fc-4582-919b-1f2ddf8bb125</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="faultProfileNr">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Error in the profile selection</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f6444523-7d25-4fca-8ff3-bcdbb1f9fb5e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="faultMasterPositionOOB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Error master position Out Of Bond</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c0737d4e-9b55-4dc4-a74f-799d0c395953</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="faultLinComputation">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Error Linearization (2 consecutive master points equals)</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>40bd7597-5691-4144-bcba-d883e0304c70</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="nbPoints">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Number of points</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c8b2d106-862a-4206-a8cd-d11dae584df7</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MasterPoints">
+							<type>
+								<array>
+									<dimension lower="1" upper="100" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="100">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Master values table</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2295df4e-72be-4531-9b5f-b4789a1f9d9b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="SlavePoints">
+							<type>
+								<array>
+									<dimension lower="1" upper="100" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="100">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Slave values table</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>75fb6c78-8477-4016-9982-4a69ec929192</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="found">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Found the value of the master in the table</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5d353950-d60b-4cff-838c-88b03cc2a39f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="index">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Index of the current master position in the table</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>601d0c50-32c4-431f-b14a-0ce25336ff54</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="linDenom">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Linearization : denominator</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>08eac82b-de4a-4b95-ba9b-dfc723068f81</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="linNum">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Linearization : numerator</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1fadd66c-89e2-40d8-a661-2d95929c82e6</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="linA">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Linearization : A coeff</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>4206d6ef-37e6-4d1e-9210-834e8bac3993</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="linB">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Linearization : B coeff</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>9fb187c3-ecf6-4299-8bb4-701c5102f2af</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars constant="true">
+						<variable name="FACTOR">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="1.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Rescaling factor for slave values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0315b96d-ef67-426b-aa8e-85d189936e6f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>parameterVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>param0,,param1,,param2,,param3,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+					<action name="C_source_code">
+						<body>
+							<ST>/* ----------------------------------------------------------------&#9;*/
+/* Type : Model of Operative Behaviour&#9;&#9;&#9;&#9;&#9;*/
+/* Category : motion_control&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Author : Dassault Systemes&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Update date : June 2021&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+/* This module do the Slave cam computation from one Master position&#9;*/
+/* The profile table inputs are provided by the module cam_profile&#9;*/
+/* It's possible to switch in real time between 4 different profiles&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+
+
+if (profileNr&lt;0 || profileNr&gt;3) {
+&#9;faultProfileNr = 1;
+} else {
+&#9;faultProfileNr = 0;
+&#9;if (profileNr==0 &amp;&amp; nbPoints0) {
+&#9;&#9;camTable = pointer0;
+&#9;&#9;nbPoints = nbPoints0;
+&#9;&#9;for (i=1; i&lt; 100; i++) {
+&#9;&#9;&#9;MasterPoints(i) = camTable-&gt;master[i-1];
+&#9;&#9;&#9;SlavePoints(i) = camTable-&gt;slave[i-1];
+&#9;&#9;}
+&#9;&#9;modulo = camTable-&gt;master[nbPoints-1];
+&#9;} else {
+&#9;&#9;if (profileNr==1 &amp;&amp; nbPoints1) {
+&#9;&#9;&#9;camTable = pointer1;
+&#9;&#9;&#9;nbPoints = nbPoints1;
+&#9;&#9;&#9;for (i=1; i&lt; 100; i++) {
+&#9;&#9;&#9;&#9;MasterPoints(i) = camTable-&gt;master[i-1];
+&#9;&#9;&#9;&#9;SlavePoints(i) = camTable-&gt;slave[i-1];
+&#9;&#9;&#9;}
+&#9;&#9;&#9;modulo = camTable-&gt;master[nbPoints-1];
+&#9;&#9;} else {
+&#9;&#9;&#9;if (profileNr==2 &amp;&amp; nbPoints2) {
+&#9;&#9;&#9;&#9;camTable = pointer2;
+&#9;&#9;&#9;&#9;nbPoints = nbPoints2;
+&#9;&#9;&#9;&#9;for (i=1; i&lt; 100; i++) {
+&#9;&#9;&#9;&#9;&#9;MasterPoints(i) = camTable-&gt;master[i-1];
+&#9;&#9;&#9;&#9;&#9;SlavePoints(i) = camTable-&gt;slave[i-1];
+&#9;&#9;&#9;&#9;}
+&#9;&#9;&#9;&#9;modulo = camTable-&gt;master[nbPoints-1];
+&#9;&#9;&#9;} else {
+&#9;&#9;&#9;&#9;if (profileNr==3 &amp;&amp; nbPoints3) {
+&#9;&#9;&#9;&#9;&#9;camTable = pointer3;
+&#9;&#9;&#9;&#9;&#9;nbPoints = nbPoints3;
+&#9;&#9;&#9;&#9;&#9;for (i=1; i&lt; 100; i++) {
+&#9;&#9;&#9;&#9;&#9;&#9;MasterPoints(i) = camTable-&gt;master[i-1];
+&#9;&#9;&#9;&#9;&#9;&#9;SlavePoints(i) = camTable-&gt;slave[i-1];
+&#9;&#9;&#9;&#9;&#9;}
+&#9;&#9;&#9;&#9;&#9;modulo = camTable-&gt;master[nbPoints-1];
+&#9;&#9;&#9;&#9;}
+&#9;&#9;&#9;}
+&#9;&#9;}
+&#9;}
+&#9;if (nbPoints &gt;= 2) {
+&#9;&#9;masterPosition = MasterPositionIn - divider * modulo;
+&#9;&#9;while (masterPosition &gt; modulo) {
+&#9;&#9;&#9;divider += 1;
+&#9;&#9;&#9;masterPosition = MasterPositionIn - divider * modulo;
+&#9;&#9;}
+&#9;&#9;while (masterPosition &lt; 0) {
+&#9;&#9;&#9;divider -= 1;
+&#9;&#9;&#9;masterPosition = MasterPositionIn - divider * modulo;
+&#9;&#9;}
+&#9;&#9;found = 0;
+&#9;&#9;for (i=1; i&lt;= nbPoints - 1 &amp;&amp; found == 0; i++) {
+&#9;&#9;&#9;if (camTable-&gt;master[i-1] &lt;= masterPosition &amp;&amp; masterPosition &lt;= camTable-&gt;master[i]) {
+&#9;&#9;&#9;&#9;index = i;
+&#9;&#9;&#9;&#9;found = 1;
+&#9;&#9;&#9;} 
+&#9;&#9;}
+&#9;&#9;if (!found) {
+&#9;&#9;&#9;faultMasterPositionOOB = 1;
+&#9;&#9;&#9;if (masterPosition &lt; camTable-&gt;master[0]) {
+&#9;&#9;&#9;&#9;slavePosition = camTable-&gt;slave[0] * FACTOR;
+&#9;&#9;&#9;} else {
+&#9;&#9;&#9;&#9;slavePosition = SlavePoints(nbPoints) * FACTOR;
+&#9;&#9;&#9;}
+&#9;&#9;} else {
+&#9;&#9;&#9;linDenom = camTable-&gt;master[index] - camTable-&gt;master[index-1];
+&#9;&#9;&#9;if (linDenom != 0.0) {
+&#9;&#9;&#9;&#9;faultLinComputation = 0;
+&#9;&#9;&#9;&#9;linNum = camTable-&gt;slave[index] - camTable-&gt;slave[index-1];
+&#9;&#9;&#9;&#9;linA = linNum / linDenom;
+&#9;&#9;&#9;&#9;linB = camTable-&gt;slave[index-1] - (linA * camTable-&gt;master[index-1]);
+&#9;&#9;&#9;&#9;slavePosition = FACTOR * (linA * masterPosition + linB);
+&#9;&#9;&#9;} else {
+&#9;&#9;&#9;&#9;faultLinComputation = 1;
+&#9;&#9;&#9;}
+&#9;&#9;}
+&#9;} else {
+&#9;&#9;slavePosition = 0;
+&#9;}
+}
+
+
+
+</ST>
+						</body>
+					</action>
+					<action name="C_header">
+						<body>
+							<ST>
+
+
+typedef struct camTableStruct
+{  
+&#9;float master[7000];
+&#9;float slave[7000];
+} camTableStruct;
+
+camTableStruct *camTable;</ST>
+						</body>
+					</action>
+				</actions>
+				<addData>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+				<documentation>
+					<xhtml:pre>This module simulates the behavior of a cam profile running module</xhtml:pre>
+				</documentation>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

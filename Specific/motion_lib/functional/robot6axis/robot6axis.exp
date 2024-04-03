@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="robot6axis" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" COMPONENT_CLASS_UUID="" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{{188, 543, 433, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, lilly_spec_lib__arm, 0, mx_status_static, 9, {{0, 0}, {0, 0}}},
+&#9;{{190, 549, 454, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, lilly_spec_lib__arm, 0, mx_status_static, 10, {{0, 0}, {0, 0}}},
+&#9;{{226, 558, 524, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, lilly_spec_lib__arm, 0, mx_status_static, 18, {{0, 0}, {0, 0}}},
+&#9;{{262, 567, 594, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, lilly_spec_lib__arm, 0, mx_status_static, 26, {{0, 0}, {0, 0}}},
+&#9;{{298, 576, 664, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, lilly_spec_lib__arm, 0, mx_status_static, 34, {{0, 0}, {0, 0}}},
+&#9;{{334, 585, 734, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, lilly_spec_lib__arm, 0, mx_status_static, 42, {{0, 0}, {0, 0}}},
+&#9;{{370, 594, 804, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, lilly_spec_lib__arm, 0, mx_status_static, 50, {{0, 0}, {0, 0}}},
+&#9;{{376, 602, 833, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, lilly_spec_lib__arm, 0, mx_status_static, 52, {{0, 0}, {0, 0}}},
+&#9;{{378, 608, 854, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, lilly_spec_lib__arm, 0, mx_status_static, 53, {{0, 0}, {0, 0}}},
+&#9;{{380, 614, 875, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, lilly_spec_lib__arm, 0, mx_status_static, 54, {{0, 0}, {0, 0}}},
+&#9;{{382, 620, 896, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, lilly_spec_lib__arm, 0, mx_status_static, 55, {{0, 0}, {0, 0}}},
+&#9;{{0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, 0, {{0, 0, 0}, {0, 0, 0}}}
+};
+T_Instance NbActeurs = 11;
+T_Instance NbProduits = 0;
+T_Instance NbActeursEtProduits = 11;
+
+void globalesInit()
+{
+}" SIGNATURE="2147483647" GENERATION_DATE="1593619642" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good" PLMId="">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
+			<CHILDREN>
+&#9;&#9;&#9;
+				<NODE NAME="servo_1" MODEL_PATH="Standard\motion_control\servo" />
+&#9;&#9;&#9;
+				<NODE NAME="FOOT" MODEL_PATH="Standard\motion_control\robotic_arm">
+&#9;&#9;&#9;&#9;
+					<NODE NAME="FOOT2" MODEL_PATH="Standard\motion_control\robotic_arm">
+&#9;&#9;&#9;&#9;&#9;
+						<NODE NAME="servo_2" MODEL_PATH="Standard\motion_control\servo" />
+&#9;&#9;&#9;&#9;&#9;
+						<NODE NAME="arm2" MODEL_PATH="Standard\motion_control\robotic_arm">
+&#9;&#9;&#9;&#9;&#9;&#9;
+							<NODE NAME="servo_3" MODEL_PATH="Standard\motion_control\servo" />
+&#9;&#9;&#9;&#9;&#9;&#9;
+							<NODE NAME="arm3" MODEL_PATH="Standard\motion_control\robotic_arm">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+								<NODE NAME="servo_4" MODEL_PATH="Standard\motion_control\servo" />
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+								<NODE NAME="arm4" MODEL_PATH="Standard\motion_control\robotic_arm">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+									<NODE NAME="servo_5" MODEL_PATH="Standard\motion_control\servo" />
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+									<NODE NAME="arm5" MODEL_PATH="Standard\motion_control\robotic_arm">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+										<NODE NAME="servo_6" MODEL_PATH="Standard\motion_control\servo" />
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+										<NODE NAME="arm6" MODEL_PATH="Standard\motion_control\robotic_arm">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+											<NODE NAME="function_trigger" MODEL_PATH="Specific\motion_lib\trigger_function">
+												<NODE NAME="arm1RowA" MODEL_PATH="Standard\motion_control\robotic_arm">
+													<NODE NAME="arm1RowB" MODEL_PATH="Standard\motion_control\robotic_arm" /></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>

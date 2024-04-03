@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-04T11:03:54-01:00" />
+	<contentHeader name="servo_position">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="motion_control.servo_position" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="MoveAbsEnable">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8932b781-8ab2-4f7f-9693-022cdd1657f9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveAbsStart">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>move command</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>4a5b3b20-8f13-4b6d-9020-9e39ff31c82f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MovePosition">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Target position in length or degree</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7362127f-9243-4662-840c-2b53f22a472a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveSpeed">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="100.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Speed in % of MAX_SPEED</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c1b754db-0565-475d-8da2-ff933ced60f7</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveAcceleration">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="100.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Acceleration in % of MAX_ACCEL</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7aa7a5fb-ac66-41a7-be07-2ccedf99de8c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveDeceleration">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="100.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Deceleration in % of MAX_DECEL</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>178096b4-f6e2-4cfa-8395-d0d765ccfb4f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MAX_SPEED">
+							<type>
+								<subrangeSigned>
+									<range lower="0.0" upper="3.4e+38" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</subrangeSigned>
+							</type>
+							<initialValue>
+								<simpleValue value="1000.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>mm/s ou deg/s</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>93692420-e225-4c8f-b0f4-02e6dbd1c176</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MAX_ACCEL">
+							<type>
+								<subrangeSigned>
+									<range lower="0.0" upper="3.4e+38" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</subrangeSigned>
+							</type>
+							<initialValue>
+								<simpleValue value="300.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>mm/s2 ou deg/s2</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c8791294-7777-4d31-8f92-d4acc3451c94</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MAX_DECEL">
+							<type>
+								<subrangeSigned>
+									<range lower="0.0" upper="3.4e+38" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</subrangeSigned>
+							</type>
+							<initialValue>
+								<simpleValue value="300.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>mm/s2 ou deg/s2 (positive number)</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>592452ba-c73e-4a13-8193-6ab57137dd94</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MODULO_LENGTH">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>329280e9-c265-4871-896c-8b50f99bf020</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inOutVars>
+						<variable name="status">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>status 0:stopped 1:accelerating 2:move constantly 3:decelerating</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>e65f8e96-e84a-4cb9-9f0f-b238b7908802</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="errorFlag">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>0: no error 1, 2, 3 : speed/accel param Error 4:Speed too high relative to modulo</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0c133cbc-7b13-4365-8d00-9b025bdd0940</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MoveAbsDone">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7a241aa8-9bfa-4e19-b47d-4f5c0c63b868</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ActualPositionAx">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Current position in axis units (mm or degree)</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>51b5b70b-31b7-423f-a5d7-57f69d91ce83</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ActualVelocity">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Current speed in mm/s or degree/s</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8042e405-b0fe-48f5-a019-f76e43d0fb94</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inoutVars</value>
+							</data>
+						</addData>
+					</inOutVars>
+					<localVars>
+						<variable name="firstStep">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2f59e4a6-2d2b-41b0-b7cb-604c07dd04e8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="stepDone">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>ensure that the treatment are not done in the same step</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f4f99a08-3652-4d8c-9943-ecbf5ae74d0d</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars>
+						<variable name="timeToStop">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>cc0730d0-3349-47a8-811c-016743ceea82</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="distanceToStop">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>9e9d6f35-29d4-4adf-a52c-23066fc16431</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="distance">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>238075b5-4a65-4dc3-887d-b130cb1eb057</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="currentTime">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>caa1727d-fa10-421a-9ae5-a97517c19e1a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="currentSpeed1">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>cec8bb53-004b-4641-beda-cc1f0bb9ee51</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="targetPosition">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>41485241-3479-4199-8550-9e718c3d212e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>position_calc</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars>
+						<variable name="ActualPositionAx1">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Current/Start position</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>dbfadb57-c1a7-48e3-b3f9-6085f90179a7</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="acceleration">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2b5e86bc-5fa6-42b0-9766-51f8ed2aab58</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="deceleration">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>fbf3e805-6c9d-4635-80b9-aec8f6190006</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="orderSpeed">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c2f7a7e3-9149-4bf8-8ea6-ffd29abb1227</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="moveDirection">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d5f08a60-9c7b-437e-a968-da54cd2eff69</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="moveDirection1">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>89379c75-4d39-48f4-8144-096280be5d55</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="endChangeSpeed">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>812a27e7-5860-4c2f-932b-79be7453d7a1</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ActualVelocity1">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Current speed in length or degree / s</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>77a35a0d-1201-4a56-b542-a4c1776868b1</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+					</addData>
+				</interface>
+				<actions>
+					<action name="C_source_code">
+						<body>
+							<ST>/* ----------------------------------------------------------------&#9;*/
+/* Type : Model of Operative Behaviour&#9;&#9;&#9;&#9;&#9;*/
+/* Category :  motion control&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Author : &#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Update date : June 2021&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+/* This module controls positioning behavior of the motion drive&#9;*/
+/* ----------------------------------------------------------------&#9;*/ 
+stepDone = 0;
+
+if (MoveAbsEnable) {
+&#9;if (status == 0) {
+&#9;&#9;stepDone = 1;
+&#9;&#9;if (MoveAbsStart == 1) {
+&#9;&#9;&#9;errorFlag = 0;
+&#9;&#9;&#9;if (!(MoveAcceleration &gt; 0 &amp;&amp; MoveAcceleration &lt;= 100.0)) {
+&#9;&#9;&#9;&#9;errorFlag = 1;
+&#9;&#9;&#9;}
+&#9;&#9;&#9;if (!(MoveDeceleration &gt; 0 &amp;&amp; MoveDeceleration &lt;= 100.0)) {
+&#9;&#9;&#9;&#9;errorFlag = 2;
+&#9;&#9;&#9;}
+&#9;&#9;&#9;if (!(MoveSpeed &gt;= -100.0 &amp;&amp; MoveSpeed &lt;= 100.0)) {
+&#9;&#9;&#9;&#9;errorFlag = 3;
+&#9;&#9;&#9;}
+&#9;&#9;&#9;if (errorFlag == 0) {
+&#9;&#9;&#9;&#9;targetPosition = MovePosition;
+&#9;&#9;&#9;&#9;status = 1;
+&#9;&#9;&#9;&#9;MoveAbsDone = 0;
+&#9;&#9;&#9;&#9;ActualVelocity = 0;
+&#9;&#9;&#9;&#9;currentTime = 0;
+&#9;&#9;&#9;&#9;acceleration = MoveAcceleration * MAX_ACCEL / 100.0; deceleration = MoveDeceleration * -MAX_DECEL / 100.0; orderSpeed = MoveSpeed * MAX_SPEED / 100.0;
+&#9;&#9;&#9;&#9;if (targetPosition == ActualPositionAx) { // test if movement is null
+&#9;&#9;&#9;&#9;&#9;status = 4;
+&#9;&#9;&#9;&#9;} else {
+&#9;&#9;&#9;&#9;&#9;if (targetPosition &lt; ActualPositionAx) {
+&#9;&#9;&#9;&#9;&#9;&#9;acceleration = -MoveAcceleration * MAX_ACCEL / 100.0; deceleration = -MoveDeceleration * -MAX_DECEL / 100.0; orderSpeed = -MoveSpeed * MAX_SPEED / 100.0;
+&#9;&#9;&#9;&#9;&#9;}
+&#9;&#9;&#9;&#9;&#9;endChangeSpeed = orderSpeed  / acceleration;
+&#9;&#9;&#9;&#9;&#9;// test if movement is very small
+&#9;&#9;&#9;&#9;&#9;ActualVelocity = ActualVelocity + acceleration * CLOCK_PERIOD/1000000;
+&#9;&#9;&#9;&#9;&#9;if (orderSpeed &gt; 0 &amp;&amp; ActualVelocity &gt; orderSpeed) ActualVelocity = orderSpeed;
+&#9;&#9;&#9;&#9;&#9;if (orderSpeed &lt; 0 &amp;&amp; ActualVelocity &lt; orderSpeed) ActualVelocity = orderSpeed;
+&#9;&#9;&#9;&#9;&#9;ActualPositionAx = ActualPositionAx + ActualVelocity * CLOCK_PERIOD/1000000;
+&#9;&#9;&#9;&#9;&#9;distance = (acceleration &gt; 0 ? 1.0 : -1.0) * (targetPosition - ActualPositionAx);
+&#9;&#9;&#9;&#9;&#9;if ( distance &lt; 0) {
+&#9;&#9;&#9;&#9;&#9;&#9;status = 4;
+&#9;&#9;&#9;&#9;&#9;}
+&#9;&#9;&#9;&#9;}
+&#9;&#9;&#9;}
+&#9;&#9;}
+&#9;}
+&#9;
+&#9;if (status == 1 &amp;&amp; stepDone == 0) { // Acceleration
+&#9;&#9;stepDone = 1;
+&#9;&#9;ActualVelocity = ActualVelocity + acceleration * CLOCK_PERIOD/1000000;
+&#9;&#9;if (orderSpeed &gt; 0 &amp;&amp; ActualVelocity &gt; orderSpeed) ActualVelocity = orderSpeed;
+&#9;&#9;if (orderSpeed &lt; 0 &amp;&amp; ActualVelocity &lt; orderSpeed) ActualVelocity = orderSpeed;
+&#9;&#9;ActualPositionAx = ActualPositionAx + ActualVelocity * CLOCK_PERIOD/1000000;
+&#9;&#9;timeToStop = fabs(ActualVelocity  / deceleration);
+&#9;&#9;distanceToStop = (deceleration &lt; 0 ? -1.0 : 1.0) * 0.5 * deceleration * timeToStop * timeToStop;
+&#9;&#9;distance = (acceleration &gt; 0 ? 1.0 : -1.0) * (targetPosition - ActualPositionAx);
+&#9;&#9;if (distance &lt;= distanceToStop) {
+&#9;&#9;&#9;status = 3;
+&#9;&#9;}
+&#9;&#9;if (currentTime &gt; endChangeSpeed) {
+&#9;&#9;&#9;ActualVelocity = orderSpeed;
+&#9;&#9;&#9;status = 2;
+&#9;&#9;}
+&#9;&#9;if (MoveAbsStart == 0 || MoveAbsEnable == 0) {
+&#9;&#9;&#9;status = 6;
+&#9;&#9;}
+&#9;}
+&#9;if (status == 2 &amp;&amp; stepDone == 0) { // constant speed
+&#9;&#9;stepDone = 1;
+&#9;&#9;ActualVelocity = orderSpeed;
+&#9;&#9;ActualPositionAx = ActualPositionAx + ActualVelocity * CLOCK_PERIOD/1000000;
+&#9;&#9;timeToStop = fabs(ActualVelocity  / deceleration);
+&#9;&#9;distanceToStop = (deceleration &lt; 0 ? -1.0 : 1.0) * 0.5 * deceleration * timeToStop * timeToStop;
+&#9;&#9;distance = (acceleration &gt; 0 ? 1.0 : -1.0) * (targetPosition - ActualPositionAx);
+&#9;&#9;if (distance &lt;= distanceToStop) {
+&#9;&#9;&#9;status = 3;
+&#9;&#9;}
+&#9;&#9;if (MoveAbsStart == 0 || MoveAbsEnable == 0) {
+&#9;&#9;&#9;status = 6;
+&#9;&#9;}
+&#9;}
+&#9;if (status == 3 &amp;&amp; stepDone == 0) { // deceleration
+&#9;&#9;stepDone = 1;
+&#9;&#9;ActualVelocity = ActualVelocity + deceleration * CLOCK_PERIOD/1000000;
+&#9;&#9;if ((ActualVelocity * deceleration ) &gt;= 0.0) {
+&#9;&#9;&#9;ActualVelocity = currentSpeed1;
+&#9;&#9;}
+&#9;&#9;ActualPositionAx = ActualPositionAx + ActualVelocity * CLOCK_PERIOD/1000000;
+&#9;&#9;timeToStop = fabs(ActualVelocity  / deceleration);
+&#9;&#9;distanceToStop = (deceleration &lt; 0 ? -1.0 : 1.0) * 0.5 * deceleration * timeToStop * timeToStop;
+&#9;&#9;distance = (acceleration &gt; 0 ? 1.0 : -1.0) * (targetPosition - ActualPositionAx);
+&#9;&#9;if ( distance &lt; 0) {
+&#9;&#9;&#9;ActualPositionAx = targetPosition;
+&#9;&#9;&#9;status = 4;
+&#9;&#9;}
+&#9;&#9;if (MoveAbsStart == 0 || MoveAbsEnable == 0) {
+&#9;&#9;&#9;status = 6;
+&#9;&#9;}
+&#9;}
+&#9;if (status == 4 &amp;&amp; stepDone == 0) { // movement succedeed - end OK
+&#9;&#9;stepDone = 1;
+&#9;&#9;MoveAbsDone = 1;
+&#9;&#9;ActualPositionAx = targetPosition;
+&#9;&#9;ActualVelocity = 0.0;
+&#9;&#9;status = 5;
+&#9;}
+&#9;
+&#9;if (status == 5 &amp;&amp; stepDone == 0) { // terminate protocol handshaking
+&#9;&#9;stepDone = 1;
+&#9;&#9;if (MoveAbsStart == 0) {
+&#9;&#9;&#9;MoveAbsDone = 0;
+&#9;&#9;&#9;status = 0;
+&#9;&#9;}
+&#9;}
+
+&#9;if (status == 6 &amp;&amp; stepDone == 0) { // movement aborted - deceleration - not reached the position
+&#9;&#9;stepDone = 1;
+&#9;&#9;ActualVelocity = ActualVelocity + deceleration * CLOCK_PERIOD/1000000;
+&#9;&#9;ActualPositionAx = ActualPositionAx + ActualVelocity * CLOCK_PERIOD/1000000;
+&#9;&#9;if (ActualVelocity1 * ActualVelocity &lt;= 0.0) {
+&#9;&#9;&#9;ActualVelocity = 0;
+&#9;&#9;&#9;status = 0;
+&#9;&#9;}
+&#9;}
+}
+
+moveDirection = ActualPositionAx - ActualPositionAx1;
+
+ActualPositionAx1 = ActualPositionAx;
+moveDirection1 = moveDirection;
+ActualVelocity1 = ActualVelocity;
+currentTime += CLOCK_PERIOD/1000000;
+currentSpeed1 = ActualVelocity;
+
+firstStep = 0;
+
+
+
+
+</ST>
+						</body>
+					</action>
+				</actions>
+				<addData>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+				<documentation>
+					<xhtml:pre>This module controls positioning behavior of the motion drive</xhtml:pre>
+				</documentation>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

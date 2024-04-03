@@ -1,0 +1,91 @@
+ forwardUp IB1
+ backwardUp IB2
+ forwardDw IB3
+ backwardDw IB4
+ ejectBadProd IB5
+ presConvUp OB6
+ presConvDw OB7
+ idRead OI8
+ mesuredWeight OI9
+ bpStart OB10
+ bpAuto OB11
+ bpManu OB12
+ bpEmergencyStop OB13
+ bpStop OB14
+ ~ LF15
+ ~ LF16
+ ~ LF17
+ ~ LF18
+ ~ LF19
+ ~ LF20
+ ~ LF21
+ ~ LF22
+ ~ LF23
+ ~ LF24
+ ~ LF25
+ ~ LF26
+ ~ LF27
+ ~ LF28
+ ~ LF29
+ ~ LF30
+ ~ LF31
+ ~ LF32
+ ~ LF33
+ ~ LF34
+ ~ LB35
+ ~ LF36
+ ~ LF37
+ ~ LF38
+ ~ LF39
+ ~ LF40
+ ~ LF41
+ ~ LF42
+ ~ LF43
+ ~ LF44
+ ~ LB45
+ ~ LF46
+ ~ LF47
+ ~ LF48
+ ~ LF49
+ ~ LF50
+ ~ LF51
+ ~ LF52
+ ~ LF53
+ ~ LF54
+ ~ LF55
+ ~ LF56
+ ~ LB57
+ ~ LB58
+ ~ LB59
+ ~ LB60
+ ~ LB61
+ ~ LF62
+ ~ LB63
+ ~ LB64
+ ~ LB65
+ ~ LB66
+ ~ LB67
+ ~ LB68
+ ~ LF69
+ ~ LB70
+ ~ LB71
+ ~ LB72
+ ~ LB73
+ ~ LB74
+ ~ LB75
+ ~ LF76
+ ~ LF77
+ ~ LF78
+<motion_lib:motor_2dir_1speed motConvUp/ 1 voltage380 75 cmdSupply 74 sensorSupply 73 forward 1 backward 2 forwardFB 72 backwardFB 71 thermal 70 speedVal 76 speedPercent 69>
+<motion_lib:motor_2dir_1speed mtConvDw/ 1 voltage380 68 cmdSupply 67 sensorSupply 66 forward 3 backward 4 forwardFB 65 backwardFB 64 thermal 63 speedVal 77 speedPercent 62>
+<motion_control:product_creator product_creator1/ 1>
+<motion_control:product_killer product_killer1/ 1>
+<motion_control:product_killer product_killer2/ 1>
+<motion_lib:single_acting_jack ejector/ 1 energy 61 cmdSupply 60 sensorSupply 59 valveWork 5 outletSensor 58 inletSensor 57 rodPosition 56 rodPercent 55 incrementValue 78>
+<motion_lib:qrreader qrreader1/ 1 idRead 8>
+<motion_lib:weighingscale weighingscale1/ 1 Weight 9>
+<motion_lib:presence_sensor prdEndConvUp/ 1 incPositionX 54 incPositionY 53 incPositionZ 52 coordCenterX 51 coordCenterY 50 coordCenterZ 49 incRotationX 48 incRotationY 47 incRotationZ 46 sensorSupply 45 presence 6>
+<motion_lib:presence_sensor prdBegConvDw/ 1 incPositionX 44 incPositionY 43 incPositionZ 42 coordCenterX 41 coordCenterY 40 coordCenterZ 39 incRotationX 38 incRotationY 37 incRotationZ 36 sensorSupply 35 presence 7>
+<motion_lib:conveyor conveyorUp/ 1 incPositionX 34 incPositionY 33 incPositionZ 32 coordCenterX 31 coordCenterY 30 coordCenterZ 29 incRotationX 28 incRotationY 27 incRotationZ 26 linearSpeed 76>
+<motion_lib:conveyor conveyorDown/ 1 incPositionX 25 incPositionY 24 incPositionZ 23 coordCenterX 22 coordCenterY 21 coordCenterZ 20 incRotationX 19 incRotationY 18 incRotationZ 17 linearSpeed 77>
+<motion_lib:pusher pusher1/ 1 moveX 16 moveY 78 moveZ 15>

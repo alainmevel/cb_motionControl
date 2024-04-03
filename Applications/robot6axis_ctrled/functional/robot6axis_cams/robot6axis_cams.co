@@ -1,0 +1,180 @@
+ profileNr II1
+ HomeCmd IB2
+ MoveVelCmd IB3
+ MoveAbsCmd IB4
+ MoveVel1ManualCmd IB5
+ MoveVel2ManualCmd IB6
+ MoveAbs1ManualCmd IB7
+ MoveAbs2ManualCmd IB8
+ StopCmd IB9
+ MovePosition IF10
+ MoveSpeed IF11
+ MoveAcceleration IF12
+ MoveDeceleration IF13
+ offsetAxToMa IF14
+ name1 IT50C15
+ name2 IT50C16
+ name3 IT50C17
+ name4 IT50C18
+ name5 IT50C19
+ name6 IT50C20
+ name1_rej IT50C21
+ name2_rej IT50C22
+ name3_rej IT50C23
+ name4_rej IT50C24
+ name5_rej IT50C25
+ name6_rej IT50C26
+ slavePosition1 OF27
+ slavePosition2 OF28
+ slavePosition3 OF29
+ slavePosition4 OF30
+ slavePosition5 OF31
+ slavePosition6 OF32
+ ActualPositionAx OF33
+ masterPosition OF34
+ ~ LF35
+ ~ LI36
+ ~ LT100F37
+ ~ LT100F38
+ ~ LI39
+ ~ LI40
+ ~ LT100F41
+ ~ LT100F42
+ ~ LI43
+ ~ LF44
+ ~ LI45
+ ~ LT100F46
+ ~ LT100F47
+ ~ LI48
+ ~ LI49
+ ~ LT100F50
+ ~ LT100F51
+ ~ LI52
+ ~ LF53
+ ~ LI54
+ ~ LT100F55
+ ~ LT100F56
+ ~ LI57
+ ~ LI58
+ ~ LT100F59
+ ~ LT100F60
+ ~ LI61
+ ~ LF62
+ ~ LI63
+ ~ LT100F64
+ ~ LT100F65
+ ~ LI66
+ ~ LI67
+ ~ LT100F68
+ ~ LT100F69
+ ~ LI70
+ ~ LF71
+ ~ LI72
+ ~ LT100F73
+ ~ LT100F74
+ ~ LI75
+ ~ LI76
+ ~ LT100F77
+ ~ LT100F78
+ ~ LI79
+ ~ LI80
+ ~ LT100F81
+ ~ LT100F82
+ ~ LI83
+ ~ LI84
+ ~ LT100F85
+ ~ LT100F86
+ ~ LI87
+ ~ LF88
+ ~ LB89
+ ~ LB90
+ ~ LF91
+ ~ LF92
+ ~ LF93
+ ~ LB94
+ ~ LB95
+ ~ LB96
+ ~ LF97
+ ~ LF98
+ ~ LF99
+ ~ LF100
+ ~ LF101
+ ~ LF102
+ ~ LF103
+ ~ LF104
+ ~ LB105
+ ~ LB106
+ ~ LB107
+ ~ LB108
+ ~ LF109
+ ~ LB110
+ ~ LF111
+ ~ LI112
+ ~ LI113
+ ~ LI114
+ ~ LT100F115
+ ~ LT100F116
+ ~ LI117
+ ~ LI118
+ ~ LT100F119
+ ~ LT100F120
+ ~ LI121
+ ~ LI122
+ ~ LT100F123
+ ~ LT100F124
+ ~ LI125
+ ~ LI126
+ ~ LT100F127
+ ~ LT100F128
+ ~ LI129
+ ~ LI130
+ ~ LT100F131
+ ~ LT100F132
+ ~ LI133
+ ~ LI134
+ ~ LT100F135
+ ~ LT100F136
+ ~ LI137
+ ~ LI138
+ ~ LT100F139
+ ~ LT100F140
+ ~ LI141
+ ~ LI142
+ ~ LT100F143
+ ~ LT100F144
+ ~ LI145
+ ~ LI146
+ ~ LT100F147
+ ~ LT100F148
+ ~ LI149
+ ~ LI150
+ ~ LT100F151
+ ~ LT100F152
+ ~ LI153
+ ~ LI154
+ ~ LT100F155
+ ~ LT100F156
+ ~ LI157
+ ~ LI158
+ ~ LT100F159
+ ~ LT100F160
+ ~ LI161
+<motion_control:servo servo_kinetix2/ 1 status 113 errorFlag 112 ActualPositionAx1 111 MoveVelDone1 110 ActualVelocity1 109 MoveAbsDone1 108 HomeCmd 2 MoveVelCmd 3 MoveAbsCmd 4 MoveVel1ManualCmd 5 MoveVel2ManualCmd 6 MoveAbs1ManualCmd 7 MoveAbs2ManualCmd 8 StopCmd 9 MovePosition 10 MoveSpeed 11 MoveAcceleration 12 MoveDeceleration 13 offsetAxToMa 14 PLC_StatusReady 107 PLC_StatusMoved 106 PLC_StatusStand 105 PLC_ActualPositionAx 104 PLC_ActualPositionMa 103 PLC_ActualVelocity 102 physicalPosInit 101 MAX_SPEED 100 MAX_ACCEL 99 MAX_DECEL 98 MODULO_LENGTH 97 StatusReady 96 StatusMoved 95 StatusStand 94 ActualPositionAx 33 ActualPositionMa 93 ActualVelocity 92 MaximumVelocity 91 StatusPosIncrease 90 StatusPosDecrease 89 displayJauge 88>
+<motion_lib:cam_profile cam_profile1/ 1 name 15 nbPoints 114 MasterPoints 115 SlavePoints 116 pointer 117>
+<motion_lib:cam_profile cam_profile7/ 1 name 21 nbPoints 118 MasterPoints 119 SlavePoints 120 pointer 121>
+<motion_lib:cam_computation cam_computation1/ 1 profileNr 1 MasterPositionIn 33 nbPoints0 114 MasterPoints0 115 SlavePoints0 116 pointer0 117 nbPoints1 118 MasterPoints1 119 SlavePoints1 120 pointer1 121 nbPoints2 87 MasterPoints2 86 SlavePoints2 85 pointer2 84 nbPoints3 83 MasterPoints3 82 SlavePoints3 81 pointer3 80 slavePosition 27 masterPosition 34>
+<motion_lib:cam_profile cam_profile2/ 1 name 16 nbPoints 122 MasterPoints 123 SlavePoints 124 pointer 125>
+<motion_lib:cam_profile cam_profile8/ 1 name 22 nbPoints 126 MasterPoints 127 SlavePoints 128 pointer 129>
+<motion_lib:cam_computation cam_computation2/ 1 profileNr 1 MasterPositionIn 33 nbPoints0 122 MasterPoints0 123 SlavePoints0 124 pointer0 125 nbPoints1 126 MasterPoints1 127 SlavePoints1 128 pointer1 129 nbPoints2 79 MasterPoints2 78 SlavePoints2 77 pointer2 76 nbPoints3 75 MasterPoints3 74 SlavePoints3 73 pointer3 72 slavePosition 28 masterPosition 71>
+<motion_lib:cam_profile cam_profile3/ 1 name 17 nbPoints 130 MasterPoints 131 SlavePoints 132 pointer 133>
+<motion_lib:cam_profile cam_profile9/ 1 name 23 nbPoints 134 MasterPoints 135 SlavePoints 136 pointer 137>
+<motion_lib:cam_computation cam_computation3/ 1 profileNr 1 MasterPositionIn 33 nbPoints0 130 MasterPoints0 131 SlavePoints0 132 pointer0 133 nbPoints1 134 MasterPoints1 135 SlavePoints1 136 pointer1 137 nbPoints2 70 MasterPoints2 69 SlavePoints2 68 pointer2 67 nbPoints3 66 MasterPoints3 65 SlavePoints3 64 pointer3 63 slavePosition 29 masterPosition 62>
+<motion_lib:cam_profile cam_profile4/ 1 name 18 nbPoints 138 MasterPoints 139 SlavePoints 140 pointer 141>
+<motion_lib:cam_profile cam_profile10/ 1 name 24 nbPoints 142 MasterPoints 143 SlavePoints 144 pointer 145>
+<motion_lib:cam_computation cam_computation4/ 1 profileNr 1 MasterPositionIn 33 nbPoints0 138 MasterPoints0 139 SlavePoints0 140 pointer0 141 nbPoints1 142 MasterPoints1 143 SlavePoints1 144 pointer1 145 nbPoints2 61 MasterPoints2 60 SlavePoints2 59 pointer2 58 nbPoints3 57 MasterPoints3 56 SlavePoints3 55 pointer3 54 slavePosition 30 masterPosition 53>
+<motion_lib:cam_profile cam_profile5/ 1 name 19 nbPoints 146 MasterPoints 147 SlavePoints 148 pointer 149>
+<motion_lib:cam_profile cam_profile11/ 1 name 25 nbPoints 150 MasterPoints 151 SlavePoints 152 pointer 153>
+<motion_lib:cam_computation cam_computation5/ 1 profileNr 1 MasterPositionIn 33 nbPoints0 146 MasterPoints0 147 SlavePoints0 148 pointer0 149 nbPoints1 150 MasterPoints1 151 SlavePoints1 152 pointer1 153 nbPoints2 52 MasterPoints2 51 SlavePoints2 50 pointer2 49 nbPoints3 48 MasterPoints3 47 SlavePoints3 46 pointer3 45 slavePosition 31 masterPosition 44>
+<motion_lib:cam_profile cam_profile6/ 1 name 20 nbPoints 154 MasterPoints 155 SlavePoints 156 pointer 157>
+<motion_lib:cam_profile cam_profile12/ 1 name 26 nbPoints 158 MasterPoints 159 SlavePoints 160 pointer 161>
+<motion_lib:cam_computation cam_computation6/ 1 profileNr 1 MasterPositionIn 33 nbPoints0 154 MasterPoints0 155 SlavePoints0 156 pointer0 157 nbPoints1 158 MasterPoints1 159 SlavePoints1 160 pointer1 161 nbPoints2 43 MasterPoints2 42 SlavePoints2 41 pointer2 40 nbPoints3 39 MasterPoints3 38 SlavePoints3 37 pointer3 36 slavePosition 32 masterPosition 35>

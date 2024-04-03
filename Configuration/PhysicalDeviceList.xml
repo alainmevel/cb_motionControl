@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<physical_device_list>
+	<physical_device brand="pd" type="ddddddd" platform="nt" isGateway="false" isRemoteIO="false" isSwitch="false">
+		<connectors>
+		</connectors>
+		<io_boards>
+		</io_boards>
+	</physical_device>
+</physical_device_list>

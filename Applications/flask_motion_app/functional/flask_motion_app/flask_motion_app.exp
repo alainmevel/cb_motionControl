@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="flask_motion_app" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" COMPONENT_CLASS_UUID="" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{0, {251, 669, 6661, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__robotic_arm, 0, mx_status_static, 37, {{0, 0}, {0, 0}}},
+&#9;{0, {252, 673, 6682, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__robotic_arm, 0, mx_status_static, 38, {{0, 0}, {0, 0}}},
+&#9;{0, {269, 679, 6747, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__robotic_arm, 0, mx_status_static, 44, {{0, 0}, {0, 0}}},
+&#9;{0, {286, 685, 6812, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__robotic_arm, 0, mx_status_static, 50, {{0, 0}, {0, 0}}},
+&#9;{0, {303, 691, 6877, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__robotic_arm, 0, mx_status_static, 56, {{0, 0}, {0, 0}}},
+&#9;{0, {320, 697, 6942, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__robotic_arm, 0, mx_status_static, 62, {{0, 0}, {0, 0}}},
+&#9;{0, {337, 703, 7007, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__robotic_arm, 0, mx_status_static, 68, {{0, 0}, {0, 0}}},
+&#9;{0, {341, 709, 7036, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__robotic_arm, 0, mx_status_static, 70, {{0, 0}, {0, 0}}},
+&#9;{0, {342, 713, 7057, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__robotic_arm, 0, mx_status_static, 71, {{0, 0}, {0, 0}}},
+&#9;{0, {390, 717, 7133, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__product_creator, 0, mx_status_static, 75, {{0, 0}, {0, 0}}},
+&#9;{0, {404, 722, 7152, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__product_killer, 0, mx_status_static, 76, {{0, 0}, {0, 0}}},
+&#9;{0, {405, 723, 7168, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__product_killer, 0, mx_status_static, 77, {{0, 0}, {0, 0}}},
+&#9;{0, {415, 725, 7188, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_st, motion_lib__qrreader, 0, mx_status_static, 79, {{0, 0}, {0, 0}}},
+&#9;{0, {415, 727, 7204, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_st, motion_lib__weighingscale, 0, mx_status_static, 80, {{0, 0}, {0, 0}}},
+&#9;{0, {415, 729, 7220, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_lib__presence_sensor, 0, mx_status_static, 81, {{0, 0}, {0, 0}}},
+&#9;{0, {419, 730, 7236, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_lib__presence_sensor, 0, mx_status_static, 82, {{0, 0}, {0, 0}}},
+&#9;{0, {423, 731, 7252, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_lib__conveyor, 0, mx_status_static, 83, {{0, 0}, {0, 0}}},
+&#9;{0, {425, 732, 7278, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_lib__conveyor, 0, mx_status_static, 84, {{0, 0}, {0, 0}}},
+&#9;{0, {427, 733, 7304, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_st, motion_lib__pusher, 0, mx_status_static, 85, {{0, 0}, {0, 0}}},
+&#9;{0, {427, 734, 7326, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {439, 752, 7372, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {451, 770, 7418, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {463, 788, 7464, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {475, 806, 7510, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {487, 824, 7556, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {499, 842, 7602, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {511, 860, 7648, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {523, 878, 7694, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {535, 896, 7740, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {547, 914, 7786, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {559, 932, 7832, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {571, 950, 7878, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {583, 968, 7924, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {595, 986, 7970, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {607, 1004, 8016, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {619, 1022, 8062, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {631, 1040, 8108, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {643, 1058, 8154, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {655, 1076, 8200, 3773}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, motion_control__product, motion_control__product__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, 0, {{0, 0, 0}, {0, 0, 0}}}
+};
+T_Instance NbActeurs = 19;
+T_Instance NbProduits = 20;
+T_Instance NbActeursEtProduits = 39;
+
+void globalesInit()
+{
+}" SIGNATURE="2147483647" GENERATION_DATE="1602750289" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good" SIMU_PERIOD="20000" ANIMATION_PERIOD="50000" SCENARIO_PERIOD="250000" PLMId="">
+	<MODEL_REQUIREMENTS>
+		<COMMENTS />
+		<FUNCTIONAL_TREE TYPE="mac">
+			<CHILDREN>
+				<NODE NAME="plc" MODEL_PATH="Applications\flask_motion_app\plc" />
+				<NODE NAME="robot6axis_ctrled1" MODEL_PATH="Applications\robot6axis_ctrled\robot6axis_ctrled" />
+				<NODE NAME="conveyors" MODEL_PATH="Applications\flask_motion_app\conveyors" />
+			</CHILDREN>
+		</FUNCTIONAL_TREE>
+	</MODEL_REQUIREMENTS>
+	<externalSrcs />
+</CB_COMPONENT>

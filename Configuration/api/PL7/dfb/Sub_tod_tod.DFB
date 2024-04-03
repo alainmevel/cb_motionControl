@@ -1,0 +1,23 @@
+[SOURCE_UNIT]
+SU_TYPE = F_B
+NAME = 'DEFAULT'
+VERSION = '00.18'
+DATE = DATE_AND_TIME #2006-08-18-09:05:29
+LANGUAGE = ST
+BODY = 
+(*Auteur : TNI-Software*)
+FUNCTION_BLOCK Sub_tod_tod
+VAR_INPUT
+En : BOOL (*Reserved*) := TRUE;
+In0 : AR_D : 1;
+In1 : AR_D : 1;
+END_VAR
+VAR_OUTPUT
+Out0 : AR_D : 2 := ( 0, 
+0 ) ;
+END_VAR
+(*PHRASE*)
+(* difference of ms  *)
+Out0[1] :=In0[0] - In1[0];
+(*END_PHRASE*)
+END_FUNCTION_BLOCK

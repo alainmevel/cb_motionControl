@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<physicalArchitectures>
+	<physicalArchitecture name="archi">
+		<ecu name="ddddddd_1" x="177" y="62" width="174" height="104" port="1024" address="127.0.0.1">
+			<physical_device brand="pd" type="ddddddd" />
+		</ecu>
+	</physicalArchitecture>
+</physicalArchitectures>

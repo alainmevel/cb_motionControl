@@ -1,0 +1,15 @@
+ armExtrem IT3F1
+ productId II2
+ velX OF3
+ velY OF4
+ velZ OF5
+ armInStop OB6
+ armExtrem1 LT3F7
+ i LI8
+ productTimeDetect LF9
+ productDetected LB10
+ productId1 LI11
+ actionTake LB12
+ activeArea LB13
+ ACTIVE_AREA_Z PF14
+ TEMPO_DETECTION_PRO PF15

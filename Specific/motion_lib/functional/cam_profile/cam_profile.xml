@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-04T11:03:50-01:00" />
+	<contentHeader name="cam_profile">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="motion_lib.cam_profile" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="name">
+							<type>
+								<string length="50" />
+							</type>
+							<initialValue>
+								<simpleValue value="'default.txt'" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>name of csv file in ./configuration/camProfiles folder, containing pairs of profile values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1f4fdf28-3bd5-4ae7-b59e-9b60f432a65b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="nbPoints">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Number of points managed in the table</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>acf11432-71dd-485c-9a50-0bb9949d553a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="MasterPoints">
+							<type>
+								<array>
+									<dimension lower="1" upper="100" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="100">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Master values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>bd1b2dcf-a4f5-4cca-ac17-d11a453e080e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="SlavePoints">
+							<type>
+								<array>
+									<dimension lower="1" upper="100" />
+									<baseType>
+										<REAL />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="100">
+										<simpleValue value="0.0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Slave values</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>e7ac2aff-1fd8-4334-9cf1-34dcab56cb46</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="pointer">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Memory pointer on camTableStruct</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>86eda550-600e-440f-a9e7-aba001f70cce</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>param</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<localVars>
+						<variable name="initialized">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>91656baf-6d88-48f8-ab4f-1e51b11a990b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="pFile">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>File pointer</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>cb728a72-4b55-497f-b197-31b8771ab87a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="fault_reading">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>The input file has structure issue</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>498ff2e9-6cee-444e-bf27-fc5bbe3c4813</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="fault_openning">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>The input file is not accessible</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a77522d5-b68b-49e5-973d-552eba3e462b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="complete_path">
+							<type>
+								<string length="254" />
+							</type>
+							<initialValue>
+								<simpleValue value="''" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>for information - path computed from name</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6376bdc4-b1e7-4583-a808-ce0e49babb46</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>param,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+					<action name="C_source_code">
+						<body>
+							<ST>/* ----------------------------------------------------------------&#9;*/
+/* Type : Model of Operative Behaviour&#9;&#9;&#9;&#9;&#9;*/
+/* Category : motion_control&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Author : Dassault Systemes&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Update date : June 2021&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+/* This module prepares one cam profile tables for the module&#9;&#9;*/
+/* cam_computation&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* It reads a file made of pair of values :&#9;&#9;&#9;&#9;*/
+/* &#9;&lt;master coord&gt;&lt;tab&gt;&lt;slave coord&gt;&#9;&#9;&#9;&#9;&#9;*/
+/* The input file need to be located in the folder &#9;&#9;&#9;*/
+/* &#9;/Configuration/camProfiles/&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* of the ControlBuild project&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+
+if(!initialized)
+{
+&#9;initialized = 1;
+&#9;fault_openning = 0;
+&#9;fault_reading = 0;
+&#9;//r&#233;cup&#233;ration du chemin complet d'ex&#233;cution
+&#9;GetModuleFileNameA(GetModuleHandle(NULL), projPath, sizeof(projPath));
+&#9;for (iPath=0;iPath&lt;6;iPath++) {
+&#9;&#9;if ((ptrToPathProjet=strrchr(projPath, '\\')) || (ptrToPathProjet=strrchr(projPath, '/')))
+&#9;&#9;&#9;*(ptrToPathProjet) = 0;
+&#9;}
+&#9;strncpy (completPathToFile, projPath, MAX_PATH);
+&#9;strcat(completPathToFile, &quot;/Configuration/camProfiles/&quot;);
+&#9;completPathToFile[strlen(completPathToFile)] = '\0';
+
+&#9;int inc;
+&#9;for(inc=1;inc&lt;=50;inc++){&#9;
+&#9;&#9;completPathToFile[strlen(completPathToFile)] = name(inc);
+&#9;}
+&#9;for(inc=1;inc&lt;=254;inc++){&#9;
+&#9;&#9;complete_path(inc) = completPathToFile[inc-1];
+&#9;}
+
+&#9;pFile = fopen(completPathToFile, &quot;r&quot;);
+&#9;pointer = (camTableStruct*)malloc(sizeof(camTableStruct));
+&#9;camTable = pointer;
+
+&#9;if (pFile == 0) {
+&#9;&#9;fault_openning = 1;
+&#9;} else {
+&#9;&#9;int fin = 0;
+&#9;&#9;nbPoints = 0;
+&#9;&#9;while(fin==0) {
+&#9;&#9;&#9;static char str[BUFSIZ];
+&#9;&#9;&#9;char *masterPosC, *slavePosC;
+&#9;&#9;&#9;float masterPos, slavePos;
+&#9;&#9;&#9;if(fgets(str, BUFSIZ, pFile) &lt;= 0) {
+&#9;&#9;&#9;&#9;fin = 1;
+&#9;&#9;&#9;} else {
+&#9;&#9;&#9;&#9;nbPoints++;
+&#9;&#9;&#9;&#9;trim(str);
+&#9;&#9;&#9;&#9;if (strlen(str)&gt;1) {
+&#9;&#9;&#9;&#9;&#9;if (str[strlen(str)-1]=='\n')
+&#9;&#9;&#9;&#9;&#9;&#9;str[strlen(str)-1] = '\0';
+&#9;&#9;&#9;&#9;&#9;masterPosC = strtok( str, &quot;\t&quot; );
+&#9;&#9;&#9;&#9;&#9;slavePosC = strtok( NULL, &quot;\t&quot;);
+&#9;&#9;&#9;&#9;&#9;if (slavePosC==NULL || masterPosC==NULL) {
+&#9;&#9;&#9;&#9;&#9;&#9;fault_reading = 1;
+&#9;&#9;&#9;&#9;&#9;} else {
+&#9;&#9;&#9;&#9;&#9;&#9;sscanf(masterPosC, &quot;%f&quot;, &amp;masterPos);
+&#9;&#9;&#9;&#9;&#9;&#9;sscanf(slavePosC, &quot;%f&quot;, &amp;slavePos);
+&#9;&#9;&#9;&#9;&#9;&#9;if (nbPoints &lt; 100) {
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;MasterPoints(nbPoints) = masterPos;
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;SlavePoints(nbPoints) = slavePos;
+&#9;&#9;&#9;&#9;&#9;&#9;}
+&#9;&#9;&#9;&#9;&#9;&#9;camTable-&gt;master[nbPoints-1] = masterPos;
+&#9;&#9;&#9;&#9;&#9;&#9;camTable-&gt;slave[nbPoints-1] = slavePos;
+&#9;&#9;&#9;&#9;&#9;}
+&#9;&#9;&#9;&#9;}
+&#9;&#9;&#9;}
+&#9;&#9;}
+&#9;}
+&#9;initialized = 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+</ST>
+						</body>
+					</action>
+					<action name="C_header">
+						<body>
+							<ST>#include &lt;stdint.h&gt;
+#include &lt;sys/time.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;windows.h&gt;
+#include &lt;psapi.h&gt;
+#include &lt;shlwapi.h&gt;
+
+
+char projPath[MAX_PATH];
+int iPath;
+
+char* ptrToPathProjet;
+char completPathToFile[MAX_PATH];
+
+void trim(char * s) {
+    char * p = s;
+    int l = strlen(p);
+
+    while(isspace(p[l - 1])) p[--l] = 0;
+    while(* p &amp;&amp; isspace(* p)) ++p, --l;
+
+    memmove(s, p, l + 1);
+}
+
+
+typedef struct camTableStruct
+{  
+&#9;float master[7000];
+&#9;float slave[7000];
+} camTableStruct;
+
+camTableStruct *camTable;
+</ST>
+						</body>
+					</action>
+				</actions>
+				<addData>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+				<documentation>
+					<xhtml:pre>This module is designed to load a cam profile from a file  located in &quot;Configuration/camProfiles/&quot; folder of the project</xhtml:pre>
+				</documentation>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

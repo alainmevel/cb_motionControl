@@ -1,0 +1,10 @@
+ name IT50C1
+ nbPoints OI2
+ MasterPoints OT100F3
+ SlavePoints OT100F4
+ pointer OI5
+ initialized LB6
+ pFile LI7
+ fault_reading LB8
+ fault_openning LB9
+ complete_path LT254C10

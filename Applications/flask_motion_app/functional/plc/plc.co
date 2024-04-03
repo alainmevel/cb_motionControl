@@ -1,0 +1,37 @@
+ presConvUp IB1
+ presConvDw IB2
+ masterPosition IF3
+ idRead II4
+ mesuredWeight II5
+ bpStart IB6
+ bpAuto IB7
+ bpManu IB8
+ bpEmergencyStop IB9
+ bpStop IB10
+ HomeCmd OB11
+ MoveVelCmd OB12
+ MoveAbsCmd OB13
+ MoveVel1ManualCmd OB14
+ MoveVel2ManualCmd OB15
+ MoveAbs1ManualCmd OB16
+ MoveAbs2ManualCmd OB17
+ StopCmd OB18
+ MovePosition OF19
+ MoveSpeed OF20
+ MoveAcceleration OF21
+ MoveDeceleration OF22
+ offsetAxToMa OF23
+ gripSyringes OB24
+ Auto OB25
+ Manu OB26
+ run OB27
+ forwardUp OB28
+ backwardUp OB29
+ forwardDw OB30
+ backwardDw OB31
+ ejectBadProd OB32
+ ~ LI33
+ ~ LB34
+<flask_motion_app:modemanagement modemanagement/ 1 bpStart 6 bpAuto 7 bpManu 8 bpEmergencyStop 9 bpStop 10 Auto 25 Manu 26 run 27>
+<flask_motion_app:motors motors/ 1 Auto 25 Manu 26 run 27 presConvUp 1 presConvDw 2 masterPosition 3 mesuredWeight 5 phaseCode 33 forwardUp 28 backwardUp 29 forwardDw 30 backwardDw 31 ejectBadProd 32 weihtOk 34>
+<flask_motion_app:robotctrl robotctrl/ 1 forwardUp 28 backwardUp 29 forwardDw 30 backwardDw 31 presConvUp 1 presConvDw 2 masterPosition 3 Auto 25 Manu 26 run 27 weightOk 34 phaseCode 33 HomeCmd 11 MoveVelCmd 12 MoveAbsCmd 13 MoveVel1ManualCmd 14 MoveVel2ManualCmd 15 MoveAbs1ManualCmd 16 MoveAbs2ManualCmd 17 StopCmd 18 MovePosition 19 MoveSpeed 20 MoveAcceleration 21 MoveDeceleration 22 offsetAxToMa 23 gripSyringes 24>

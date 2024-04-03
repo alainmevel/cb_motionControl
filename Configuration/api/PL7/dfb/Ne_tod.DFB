@@ -1,0 +1,22 @@
+[SOURCE_UNIT]
+SU_TYPE = F_B
+NAME = 'DEFAULT'
+VERSION = '00.21'
+DATE = DATE_AND_TIME #2006-08-17-16:26:35
+LANGUAGE = ST
+BODY = 
+(*Auteur : TNI-Software*)
+FUNCTION_BLOCK Ne_tod
+VAR_INPUT
+En : BOOL (*Reserved*) := TRUE;
+In0 : AR_D : 1;
+In1 : AR_D : 1;
+END_VAR
+VAR_OUTPUT
+Out0 : BOOL := FALSE;
+END_VAR
+(*PHRASE*)
+(* compare time  *)
+Out0 := (In0[0] <> In1[0]);
+(*END_PHRASE*)
+END_FUNCTION_BLOCK

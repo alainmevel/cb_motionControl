@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="product_creator" COMMENTS="This module simulates the creation of products.
+The creation can be :
+- pulsed 
+- automatic and cyclic " COMMENTS_PATTERN="&lt;CLASS_PATTERN&gt;" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="&lt;CLASS_PATTERN&gt;" COMPONENT_CLASS="SIMULATION" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good" PLMId="" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{0, {5, 523, 17, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, motion_control__product_creator, 0, mx_status_static, 1, {{0, 0}, {0, 0}}},
+&#9;{{0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, 0, {{0, 0, 0}, {0, 0, 0}}}
+};
+T_Instance NbActeurs = 1;
+T_Instance NbProduits = 0;
+T_Instance NbActeursEtProduits = 1;
+
+void globalesInit()
+{
+}" GENERATION_DATE="1622555517" SIGNATURE="2147483647">
+	<MODEL_REQUIREMENTS>
+		<FUNCTIONAL_TREE TYPE="c" />
+	</MODEL_REQUIREMENTS>
+	<externalSrcs />
+</CB_COMPONENT>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PROPERTIES_FILE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://xsd/properties.xsd">
+	<PROPERTIES_SET>
+		<PROPERTY NAME="NomGroupe" TYPE="string" MAXLENGTH="6">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Nom du groupe &lt;NomGroupe&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">Group Name &lt;NomGroupe&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="Groupe" />
+			<APPLIED_TO CLASS="VAD_ModeleEquipement" />
+			<APPLIED_TO CLASS="VAD_PartieCommande" />
+			<APPLIED_TO CLASS="VAD_PartieOperative" />
+			<APPLIED_TO CLASS="VAD_PartieSupervision" />
+			<APPLIED_TO CLASS="BFU" />
+			<APPLIED_TO CLASS="Fonction" />
+		</PROPERTY>
+		<PROPERTY NAME="LibGroupe" TYPE="string" MAXLENGTH="18">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Libell&#233; du groupe &lt;LibGroupe&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">Group comment  &lt;LibGroupe&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="Groupe" />
+		</PROPERTY>
+		<PROPERTY NAME="RefVAD" TYPE="string" MAXLENGTH="6">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">R&#233;f&#233;rence du VAD &lt;RefVAD&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">VAD referency &lt;RefVAD&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="VAD_ModeleEquipement" />
+			<APPLIED_TO CLASS="VAD_PartieCommande" />
+			<APPLIED_TO CLASS="VAD_PartieOperative" />
+			<APPLIED_TO CLASS="VAD_PartieSupervision" />
+			<APPLIED_TO CLASS="BFU" />
+			<APPLIED_TO CLASS="Fonction" />
+		</PROPERTY>
+		<PROPERTY NAME="LibVAD" TYPE="string" MAXLENGTH="18">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Lib&#233;ll&#233; du VAD &lt;LibVAD&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">VAD comment &lt;LibVAD&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="VAD_ModeleEquipement" />
+		</PROPERTY>
+		<PROPERTY NAME="CtrlVAD" TYPE="string" MAXLENGTH="6">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Controle du VAD &lt;CtrlVAD&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">VAD control cde &lt;CtrlVAD&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="VAD_PartieCommande" />
+			<APPLIED_TO CLASS="BFU" />
+		</PROPERTY>
+		<PROPERTY NAME="LibCtrlVAD" TYPE="string" MAXLENGTH="18">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Libell&#233; du control du VAD &lt;LibCtrlVAD&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">Comment of the vad Control &lt;LibCtrlVAD&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="VAD_PartieCommande" />
+		</PROPERTY>
+		<PROPERTY NAME="RepPO" TYPE="string" MAXLENGTH="6">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Repere de partie op&#233;rative &lt;RepPO&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">Operative part tag &lt;RepPO&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="VAD_PartieOperative" />
+		</PROPERTY>
+		<PROPERTY NAME="LibPO" TYPE="string" MAXLENGTH="18">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Libelle de la partie op&#233;rative &lt;LibPO&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">Comment of the operative part &lt;LibPO&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="VAD_PartieOperative" />
+		</PROPERTY>
+		<PROPERTY NAME="NomFonction" TYPE="string" MAXLENGTH="6">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Nom de la fonction &lt;NomFonction&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">Function Name &lt;NomFonction&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="Fonction" />
+			<APPLIED_TO CLASS="BFU" />
+		</PROPERTY>
+		<PROPERTY NAME="NumFonction" TYPE="string" MAXLENGTH="2">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Num&#233;ro de la fonction &lt;NumFonction&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">Function Number &lt;NumFonction&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="Fonction" />
+			<APPLIED_TO CLASS="BFU" />
+		</PROPERTY>
+		<PROPERTY NAME="LibFonction" TYPE="string" MAXLENGTH="18">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Libell&#233; de la fonction &lt;LibFonction&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">Function comment &lt;LibFonction&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="Fonction" />
+		</PROPERTY>
+		<PROPERTY NAME="TagBFU" TYPE="string" MINLENGTH="2" MAXLENGTH="8">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Tag BFU &lt;TagBFU&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">BFU Tag&lt;TagBFU&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="BFU" />
+		</PROPERTY>
+		<PROPERTY NAME="LibBFU" TYPE="string" MINLENGTH="2" MAXLENGTH="8">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Commentaire BFU &lt;LibBFU&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">Comment of the BFU &lt;LibBFU&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="BFU" />
+		</PROPERTY>
+		<PROPERTY NAME="CodeSup" TYPE="string" MAXLENGTH="6">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Code  partie Supervision  &lt;CodeSup&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">Scada Code &lt;CodeSup&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="VAD_PartieSupervision" />
+		</PROPERTY>
+		<PROPERTY NAME="LibSup" TYPE="string" MAXLENGTH="18">
+			<LANGUAGES>
+				<LANGUAGE NAME="FR">Commentaire Supervision &lt;LibSup&gt;</LANGUAGE>
+				<LANGUAGE NAME="EN">Comment of Scada &lt;LibSup&gt;</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="VAD_PartieSupervision" />
+		</PROPERTY>
+	</PROPERTIES_SET>
+</PROPERTIES_FILE>

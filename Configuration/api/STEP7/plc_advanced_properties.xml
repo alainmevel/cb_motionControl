@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<properties_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:xsd/properties.xsd">
+	<enum name="enumSfcTo">
+		<item>SFC</item>
+		<item>ST</item>
+	</enum>
+	<properties_set>
+		<languages><language name="EN">External generator properties</language><language name="FR">Propriétés du générateur externe</language></languages>
+		<property name="sfcTo" type="enumSfcTo">
+			<languages><language name="EN">Generate SFC to</language><language name="FR">Générer les SFC en tant que</language></languages>
+			<applied_to class="PLCTrans"/>
+		</property>
+		<property name="iDB" type="boolean">
+			<languages><language name="EN">Using instance DataBlock</language><language name="FR">Utiliser des DataBlock instanciés</language></languages>
+			<applied_to class="PLCTrans"/>
+		</property>
+	</properties_set>
+</properties_file>

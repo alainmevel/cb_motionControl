@@ -1,0 +1,57 @@
+ status II1
+ errorFlag II2
+ ActualPositionAx1 IF3
+ MoveVelDone1 IB4
+ ActualVelocity1 IF5
+ MoveAbsDone1 IB6
+ HomeCmd IB7
+ MoveVelCmd IB8
+ MoveAbsCmd IB9
+ MoveVel1ManualCmd IB10
+ MoveVel2ManualCmd IB11
+ MoveAbs1ManualCmd IB12
+ MoveAbs2ManualCmd IB13
+ StopCmd IB14
+ MovePosition IF15
+ MoveSpeed IF16
+ MoveAcceleration IF17
+ MoveDeceleration IF18
+ offsetAxToMa IF19
+ PLC_StatusReady IB20
+ PLC_StatusMoved IB21
+ PLC_StatusStand IB22
+ PLC_ActualPositionAx IF23
+ PLC_ActualPositionMa IF24
+ PLC_ActualVelocity IF25
+ physicalPosInit IF26
+ MAX_SPEED IF27
+ MAX_ACCEL IF28
+ MAX_DECEL IF29
+ MODULO_LENGTH IF30
+ StatusReady OB31
+ StatusMoved OB32
+ StatusStand OB33
+ ActualPositionAx OF34
+ ActualPositionMa OF35
+ ActualVelocity OF36
+ MaximumVelocity OF37
+ StatusPosIncrease OB38
+ StatusPosDecrease OB39
+ displayJauge OF40
+ ~ LI41
+ ~ LB42
+ ~ LB43
+ ~ LB44
+ ~ LF45
+ ~ LF46
+ ~ LF47
+ ~ LB48
+ ~ LB49
+ ~ LF50
+ ~ LB51
+ ~ LB52
+ ~ LF53
+<motion_control:servo_mode servo_mode/ 1 PLC_StatusReady 20 PLC_StatusMoved 21 PLC_StatusStand 22 PLC_ActualPositionAx 23 PLC_ActualPositionMa 24 PLC_ActualVelocity 25 StatusReady 42 StatusMoved 43 StatusStand 44 ActualPositionMa 45 ActualVelocity 46 MaximumVelocity 47 physicalPosInit 26 ActualPositionAx 3 StatusReady_o 31 StatusMoved_o 32 StatusStand_o 33 ActualPositionAx_o 34 ActualPositionMa_o 35 ActualVelocity_o 36 MaximumVelocity_o 37 StatusPosIncrease_o 38 StatusPosDecrease_o 39 displayJauge_o 40>
+<motion_control:servo_control servo_control/ 1 HomeCmd 7 MoveVelCmd 8 MoveAbsCmd 9 MoveVel1ManualCmd 10 MoveVel2ManualCmd 11 MoveAbs1ManualCmd 12 MoveAbs2ManualCmd 13 StopCmd 14 MovePosition 15 MoveSpeed 16 MoveAcceleration 17 MoveDeceleration 18 offsetAxToMa 19 physicalPosInit 26 MAX_SPEED 27 status 1 errorFlag 2 IOActualPositionAx 3 IOVelDone 4 IOAbsDone 6 IOActualVelocity 5 OperationMode 41 StatusReady 42 StatusMove 43 StatusStand 44 ActualPositionMa 45 ActualVelocity 46 MaximumVelocity 47 VelEnabled 48 VelCmd 49 PosEnabled 51 PosCmd 52 Position 53 Speed 50>
+<motion_control:servo_velocity servo_velocity/ 1 MoveVelEnable 48 MoveVelStart 49 MoveSpeed 50 MoveAcceleration 17 MoveDeceleration 18 MAX_SPEED 27 MAX_ACCEL 28 MAX_DECEL 29 MODULO_LENGTH 30 status 1 errorFlag 2 MoveVelDone 4 ActualPositionAx 3 ActualVelocity 5>
+<motion_control:servo_position servo_position/ 1 MoveAbsEnable 51 MoveAbsStart 52 MovePosition 53 MoveSpeed 50 MoveAcceleration 17 MoveDeceleration 18 MAX_SPEED 27 MAX_ACCEL 28 MAX_DECEL 29 MODULO_LENGTH 30 status 1 errorFlag 2 MoveAbsDone 6 ActualPositionAx 3 ActualVelocity 5>

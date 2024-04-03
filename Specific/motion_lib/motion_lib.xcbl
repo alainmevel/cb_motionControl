@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<LIBRARY NAME="motion_lib" STANDARD="FALSE" LV="FALSE" FB="FALSE">
+	<PROPERTIES>
+		<PROPERTY NAME="IdentifierProperty" VALUE="8c051c50-a353-4d27-be37-32e1ce81a9d9">
+		</PROPERTY>
+		<PROPERTY NAME="noitintilppa" VALUE="true">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+	</PROPERTIES>
+	<GROUPS>
+		<GROUP NAME="Actors and Products">
+			<FILES>
+				<FILE NAME="qrreader" />
+				<FILE NAME="weighingscale" />
+				<FILE NAME="pusher" />
+				<FILE NAME="presence_sensor" />
+				<FILE NAME="conveyor" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+		<GROUP NAME="cam_control">
+			<FILES>
+				<FILE NAME="cam_computation" />
+				<FILE NAME="cam_profile" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+	</GROUPS>
+</LIBRARY>

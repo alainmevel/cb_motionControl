@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<TARGET_LIST>
+	<TARGET NAME="simu" OS="nt" SIMULATION_OS="nt" IP_Address="127.0.0.1" IP_Address2="127.0.0.1" IP_Address3="127.0.0.1" IP_Address4="127.0.0.1" HOSTNAME="" HOSTNAME2="" HOSTNAME3="" HOSTNAME4="" PORT="1024" IDENTIFIER="26ab31d7-61b6-44e8-9128-37cea490d390" INTERNAL_FIELD_BUS="TRUE">
+		<io_boards>
+		</io_boards>
+	</TARGET>
+	<TARGET NAME="ffffff" OS="nt_env" SIMULATION_OS="nt" IP_Address="127.0.0.1" IP_Address2="127.0.0.1" IP_Address3="127.0.0.1" IP_Address4="127.0.0.1" HOSTNAME="" HOSTNAME2="" HOSTNAME3="" HOSTNAME4="" PORT="1024" IDENTIFIER="94187bef-a4a6-4379-a055-5208b95385c1" INTERNAL_FIELD_BUS="TRUE">
+		<io_boards>
+		</io_boards>
+	</TARGET>
+</TARGET_LIST>
