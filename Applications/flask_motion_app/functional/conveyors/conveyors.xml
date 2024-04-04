@@ -2,7 +2,7 @@
 <!-- Generator: ControlBuild -->
 
 <project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
-	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x Refresh1" creationDateTime="2024-04-03T17:54:29-01:00" />
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x Refresh1" creationDateTime="2024-04-04T17:33:31-01:00" />
 	<contentHeader name="conveyors">
 		<coordinateInfo>
 			<fbd>
@@ -31,7 +31,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>cb410213-31ce-485a-95dc-1f3da18572ad</value>
+									<value>2692005c-acbf-4c55-a79c-01124c515df0</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -53,7 +53,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>3e98c843-2991-4f68-afb5-9e7e4bf57164</value>
+									<value>a7120651-3a68-4550-a735-8838f997db36</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -85,7 +85,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>67c51616-b4bc-462d-8802-4992468c5425</value>
+									<value>d538d04f-531c-433f-a66c-b90659c7cc3b</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -107,7 +107,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>ae73455e-5398-4fd1-b00c-caea0b1177f7</value>
+									<value>736a6073-a6b1-4310-8322-d1cbb1c58e2b</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -139,7 +139,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>ea45a60f-3ae0-4ff9-be8e-660c3261d07d</value>
+									<value>340c76d1-e466-4f92-9572-e55c4bc420b5</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -168,7 +168,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>12a86611-9e1c-4556-ad43-daf15223f483</value>
+									<value>2a38fc17-a487-4481-8282-b4f4e53726d5</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -190,7 +190,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>729e226d-a1d0-4fd2-9d79-faa386f89a80</value>
+									<value>0c817fbf-132c-4fcc-9635-e640d8074f22</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -212,7 +212,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>91d0e204-5b57-4e62-b0d9-749429728eec</value>
+									<value>c878c5fc-765c-4038-bd16-2f22c46b1d8f</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -231,7 +231,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>eb9547de-70c7-4c35-b038-2650c0827d52</value>
+									<value>06dbc998-3ff4-4232-8d39-81da59122f27</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -257,7 +257,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>3d9443e1-24d8-44f0-bd47-985948c8bd95</value>
+									<value>031dfba5-c13c-4af9-9ae4-c0cbb5cd4ac7</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -276,7 +276,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>891aafe1-0e9b-4adf-82d0-99fe67c522ff</value>
+									<value>9161f168-ffde-4e2e-871e-6228f6f953a6</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -295,7 +295,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>683dd6a4-3a90-4a6f-8327-c6aa0cd6b1a1</value>
+									<value>ccc80fca-f15d-48e5-9891-95b8e2fb252b</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -314,7 +314,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>50ea28a2-f687-4cbe-9d92-9fd83cd55493</value>
+									<value>0633d314-7412-49c8-b7a4-d46dd855bfa9</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -333,7 +333,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>acf9807c-6fb5-4e9b-b767-818a5fd6f0e1</value>
+									<value>a92dd196-eda4-4ed4-aaa1-9c61d886f9f9</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -474,8 +474,8 @@
 									<connectionPointIn>
 										<connection refLocalId="1">
 											<position x="320" y="216" />
-											<position x="340" y="216" />
-											<position x="340" y="216" />
+											<position x="342" y="216" />
+											<position x="342" y="216" />
 											<position x="384" y="216" />
 										</connection>
 									</connectionPointIn>
@@ -506,6 +506,9 @@
 								</variable>
 							</outputVariables>
 							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>cmdUp:312@216,cmd</value>
+								</data>
 								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
 									<value>cmdUp:312@216,cmd</value>
 								</data>
@@ -578,6 +581,9 @@
 								</variable>
 							</outputVariables>
 							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>cmdDw:360@480,cmd</value>
+								</data>
 								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
 									<value>cmdDw:360@480,cmd</value>
 								</data>
@@ -659,9 +665,9 @@
 									<connectionPointIn>
 										<connection refLocalId="4">
 											<position x="344" y="984" />
-											<position x="381" y="984" />
-											<position x="381" y="984" />
-											<position x="432" y="984" />
+											<position x="378" y="984" />
+											<position x="378" y="960" />
+											<position x="432" y="960" />
 										</connection>
 									</connectionPointIn>
 								</variable>
@@ -899,9 +905,9 @@
 								<variable formalParameter="linearSpeed">
 									<connectionPointIn>
 										<connection refLocalId="13" formalParameter="speedVal">
-											<position x="826" y="240" />
-											<position x="873" y="240" />
-											<position x="873" y="240" />
+											<position x="826" y="216" />
+											<position x="869" y="216" />
+											<position x="869" y="240" />
 											<position x="912" y="240" />
 										</connection>
 									</connectionPointIn>
@@ -962,9 +968,9 @@
 								<variable formalParameter="linearSpeed">
 									<connectionPointIn>
 										<connection refLocalId="14" formalParameter="speedVal">
-											<position x="850" y="504" />
-											<position x="885" y="504" />
-											<position x="885" y="504" />
+											<position x="850" y="480" />
+											<position x="881" y="480" />
+											<position x="881" y="504" />
 											<position x="912" y="504" />
 										</connection>
 									</connectionPointIn>
@@ -993,9 +999,9 @@
 								<variable formalParameter="moveY">
 									<connectionPointIn>
 										<connection refLocalId="18" formalParameter="incrementValue">
-											<position x="861" y="1032" />
-											<position x="932" y="1032" />
-											<position x="932" y="1008" />
+											<position x="861" y="960" />
+											<position x="925" y="960" />
+											<position x="925" y="1008" />
 											<position x="984" y="1008" />
 										</connection>
 									</connectionPointIn>
