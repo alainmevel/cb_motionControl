@@ -2,7 +2,7 @@
 <!-- Generator: ControlBuild -->
 
 <project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
-	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x Refresh1" creationDateTime="2024-04-09T10:35:00-01:00" />
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x Refresh1" creationDateTime="2024-04-09T11:08:44-01:00" />
 	<contentHeader name="plc">
 		<coordinateInfo>
 			<fbd>
@@ -1547,7 +1547,7 @@
 							</outputVariables>
 							<addData>
 								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
-									<value>sensors:288@240,sensors,31.Modes,Modes</value>
+									<value>31.Modes,Modes,sensors:288@240,sensors</value>
 								</data>
 								<data name="Geensys.CB.connectionOut" handleUnknown="preserve">
 									<value>cmdUp,cmdUp:1008@216,cmdDw,cmdDw:1008@240</value>
@@ -1753,7 +1753,7 @@
 							</outputVariables>
 							<addData>
 								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
-									<value>35.cmdUp,cmdUp,31.Modes,Modes,35.cmdDw,cmdDw,sensors:264@576,sensors</value>
+									<value>sensors:264@576,sensors,31.Modes,Modes,35.cmdUp,cmdUp,35.cmdDw,cmdDw</value>
 								</data>
 								<data name="Geensys.CB.connectionOut" handleUnknown="preserve">
 									<value>orders,orders:936@552</value>
