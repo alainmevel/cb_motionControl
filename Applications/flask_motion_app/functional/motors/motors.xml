@@ -2,7 +2,7 @@
 <!-- Generator: ControlBuild -->
 
 <project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
-	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-04T11:03:58-01:00" />
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x Refresh1" creationDateTime="2024-04-09T15:09:06-01:00" />
 	<contentHeader name="motors">
 		<coordinateInfo>
 			<fbd>
@@ -452,7 +452,7 @@
 				</actions>
 				<body>
 					<LD>
-						<leftPowerRail localId="32">
+						<leftPowerRail localId="33">
 							<position x="0" y="100" />
 						</leftPowerRail>
 						<label localId="0" label="1">
@@ -480,7 +480,7 @@
 						<contact localId="23">
 							<position x="0" y="500" />
 							<connectionPointIn>
-								<connection refLocalId="32">
+								<connection refLocalId="33">
 									<position x="10" y="550" />
 									<position x="10" y="550" />
 									<position x="10" y="550" />
@@ -492,7 +492,7 @@
 						<contact localId="1">
 							<position x="0" y="600" />
 							<connectionPointIn>
-								<connection refLocalId="32">
+								<connection refLocalId="33">
 									<position x="10" y="650" />
 									<position x="10" y="650" />
 									<position x="10" y="650" />
@@ -838,7 +838,31 @@
 							</connectionPointIn>
 							<variable>ejectBadProd</variable>
 						</coil>
-						<rightPowerRail localId="33">
+						<comment localId="32" width="101" height="101">
+							<position x="556" y="223" />
+							<content />
+							<addData>
+								<data name="font" handleUnknown="preserve">
+									<value>Arial</value>
+								</data>
+								<data name="fontSize" handleUnknown="preserve">
+									<value>8</value>
+								</data>
+								<data name="textColor" handleUnknown="preserve">
+									<value>rgb(0,0,0)</value>
+								</data>
+								<data name="backgroundColor" handleUnknown="preserve">
+									<value>rgb(255,255,225)</value>
+								</data>
+								<data name="transparentBackground" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+								<data name="transparentFrame" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</comment>
+						<rightPowerRail localId="34">
 							<position x="1100" y="100" />
 							<connectionPointIn>
 								<connection refLocalId="4" />
