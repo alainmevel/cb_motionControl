@@ -13,15 +13,8 @@ void globalesInit()
 {
 }" SIGNATURE="2147483647" GENERATION_DATE="1603358591" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="bad">
 	<MODEL_REQUIREMENTS>
-&#9;
 		<COMMENTS />
-&#9;
-		<FUNCTIONAL_TREE TYPE="mac">
-&#9;&#9;
-			<CHILDREN>
-&#9;&#9;&#9;
-				<NODE NAME="modemanagement" MODEL_PATH="Applications\flask_motion_app\modemanagement">
-					<NODE NAME="motors" MODEL_PATH="Applications\flask_motion_app\motors">
-						<NODE NAME="robotctrl" MODEL_PATH="Applications\flask_motion_app\robotctrl" /></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+		<FUNCTIONAL_TREE TYPE="mac" />
+	</MODEL_REQUIREMENTS>
 	<externalSrcs />
 </CB_COMPONENT>
