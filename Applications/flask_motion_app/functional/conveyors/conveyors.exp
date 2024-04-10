@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Generator: controlbuild -->
+<!-- Generator: ControlBuild -->
 
 <CB_COMPONENT NAME="conveyors" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" COMPONENT_CLASS_UUID="" AP_DEC="" SIGNATURE="" GENERATION_DATE="" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="bad">
 	<MODEL_REQUIREMENTS>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Generator: controlbuild -->
+<!-- Generator: ControlBuild -->
 
 <project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
-	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x Refresh1" creationDateTime="2024-04-09T17:07:52-01:00" />
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x Refresh1" creationDateTime="2024-04-10T10:43:01-01:00" />
 	<contentHeader name="conveyors">
 		<coordinateInfo>
 			<fbd>
@@ -30,17 +30,17 @@
 								<simpleValue value="false" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
-									<value>&lt;CLASS_PATTERN&gt;</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>2692005c-acbf-4c55-a79c-01124c515df0</value>
 								</data>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -52,17 +52,17 @@
 								<simpleValue value="false" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
-									<value>&lt;CLASS_PATTERN&gt;</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>a7120651-3a68-4550-a735-8838f997db36</value>
 								</data>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -84,17 +84,17 @@
 								<simpleValue value="false" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
-									<value>&lt;CLASS_PATTERN&gt;</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>d538d04f-531c-433f-a66c-b90659c7cc3b</value>
 								</data>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -106,17 +106,17 @@
 								<simpleValue value="false" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
-									<value>&lt;CLASS_PATTERN&gt;</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>736a6073-a6b1-4310-8322-d1cbb1c58e2b</value>
 								</data>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -138,17 +138,17 @@
 								<simpleValue value="false" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
-									<value>&lt;CLASS_PATTERN&gt;</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>340c76d1-e466-4f92-9572-e55c4bc420b5</value>
 								</data>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -167,17 +167,17 @@
 								<simpleValue value="false" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
-									<value>&lt;CLASS_PATTERN&gt;</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>2a38fc17-a487-4481-8282-b4f4e53726d5</value>
 								</data>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -189,17 +189,17 @@
 								<simpleValue value="false" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
-									<value>&lt;CLASS_PATTERN&gt;</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>0c817fbf-132c-4fcc-9635-e640d8074f22</value>
 								</data>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -211,14 +211,14 @@
 								<simpleValue value="0" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>c878c5fc-765c-4038-bd16-2f22c46b1d8f</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -230,14 +230,14 @@
 								<simpleValue value="0" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>06dbc998-3ff4-4232-8d39-81da59122f27</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -256,14 +256,14 @@
 								<simpleValue value="false" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>031dfba5-c13c-4af9-9ae4-c0cbb5cd4ac7</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -275,14 +275,14 @@
 								<simpleValue value="false" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>9161f168-ffde-4e2e-871e-6228f6f953a6</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -294,14 +294,14 @@
 								<simpleValue value="false" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>ccc80fca-f15d-48e5-9891-95b8e2fb252b</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -313,14 +313,14 @@
 								<simpleValue value="false" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>0633d314-7412-49c8-b7a4-d46dd855bfa9</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
@@ -332,14 +332,14 @@
 								<simpleValue value="false" />
 							</initialValue>
 							<addData>
-								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
-									<value>false</value>
-								</data>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
 									<value>a92dd196-eda4-4ed4-aaa1-9c61d886f9f9</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
 								</data>
 							</addData>
 						</variable>
