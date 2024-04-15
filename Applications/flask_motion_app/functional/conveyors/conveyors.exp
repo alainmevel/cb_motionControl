@@ -10,17 +10,17 @@
 &#9;&#9;
 			<CHILDREN>
 &#9;&#9;&#9;
-				<NODE NAME="motConvUp" MODEL_PATH="Specific\motion_lib\motor_2dir_1speed">
+				<NODE NAME="mtConvDw" MODEL_PATH="Specific\motion_lib\motor_2dir_1speed">
 &#9;&#9;&#9;&#9;
-					<NODE NAME="mtConvDw" MODEL_PATH="Specific\motion_lib\motor_2dir_1speed">
+					<NODE NAME="product_creator1" MODEL_PATH="Standard\motion_control\product_creator">
 &#9;&#9;&#9;&#9;&#9;
-						<NODE NAME="product_creator1" MODEL_PATH="Standard\motion_control\product_creator">
+						<NODE NAME="product_killer1" MODEL_PATH="Standard\motion_control\product_killer">
 &#9;&#9;&#9;&#9;&#9;&#9;
-							<NODE NAME="product_killer1" MODEL_PATH="Standard\motion_control\product_killer">
+							<NODE NAME="product_killer2" MODEL_PATH="Standard\motion_control\product_killer">
 &#9;&#9;&#9;&#9;&#9;&#9;&#9;
-								<NODE NAME="product_killer2" MODEL_PATH="Standard\motion_control\product_killer">
+								<NODE NAME="ejector" MODEL_PATH="Specific\motion_lib\single_acting_jack">
 &#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
-									<NODE NAME="ejector" MODEL_PATH="Specific\motion_lib\single_acting_jack">
+									<NODE NAME="conveyorUp" MODEL_PATH="Specific\motion_lib\conveyor">
 &#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
 										<NODE NAME="qrreader1" MODEL_PATH="Specific\motion_lib\qrreader">
 &#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
@@ -29,9 +29,7 @@
 												<NODE NAME="prdEndConvUp" MODEL_PATH="Specific\motion_lib\presence_sensor">
 &#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
 													<NODE NAME="prdBegConvDw" MODEL_PATH="Specific\motion_lib\presence_sensor">
-&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
-														<NODE NAME="conveyorUp" MODEL_PATH="Specific\motion_lib\conveyor">
-															<NODE NAME="conveyorDown" MODEL_PATH="Specific\motion_lib\conveyor">
-																<NODE NAME="pusher1" MODEL_PATH="Specific\motion_lib\pusher" /></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+														<NODE NAME="conveyorDown" MODEL_PATH="Specific\motion_lib\conveyor">
+															<NODE NAME="pusher1" MODEL_PATH="Specific\motion_lib\pusher" /></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
 	<externalSrcs />
 </CB_COMPONENT>

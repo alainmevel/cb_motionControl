@@ -2,7 +2,7 @@
 <!-- Generator: ControlBuild -->
 
 <project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
-	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x Refresh1" creationDateTime="2024-04-04T17:33:31-01:00" />
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x Refresh1" creationDateTime="2024-04-15T15:46:18-01:00" />
 	<contentHeader name="conveyors">
 		<coordinateInfo>
 			<fbd>
@@ -366,30 +366,6 @@
 				<body>
 					<FBD>
 						<inVariable localId="0">
-							<position x="312" y="216" />
-							<expression>forwardUp</expression>
-							<addData>
-								<data name="Geensys.CB.group" handleUnknown="preserve">
-									<value>cmdUp</value>
-								</data>
-								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
-									<value>312,216</value>
-								</data>
-							</addData>
-						</inVariable>
-						<inVariable localId="1">
-							<position x="312" y="216" />
-							<expression>backwardUp</expression>
-							<addData>
-								<data name="Geensys.CB.group" handleUnknown="preserve">
-									<value>cmdUp</value>
-								</data>
-								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
-									<value>312,216</value>
-								</data>
-							</addData>
-						</inVariable>
-						<inVariable localId="2">
 							<position x="360" y="480" />
 							<expression>forwardDw</expression>
 							<addData>
@@ -401,7 +377,7 @@
 								</data>
 							</addData>
 						</inVariable>
-						<inVariable localId="3">
+						<inVariable localId="1">
 							<position x="360" y="480" />
 							<expression>backwardDw</expression>
 							<addData>
@@ -413,114 +389,39 @@
 								</data>
 							</addData>
 						</inVariable>
-						<inVariable localId="4">
+						<inVariable localId="2">
 							<position x="336" y="984" />
 							<expression>ejectBadProd</expression>
 						</inVariable>
-						<outVariable localId="5">
+						<outVariable localId="3">
 							<position x="1728" y="192" />
 							<connectionPointIn>
-								<connection refLocalId="6" formalParameter="presence" />
+								<connection refLocalId="4" formalParameter="presence" />
 							</connectionPointIn>
 							<expression>presConvUp</expression>
 						</outVariable>
-						<outVariable localId="7">
+						<outVariable localId="5">
 							<position x="1728" y="456" />
 							<connectionPointIn>
-								<connection refLocalId="8" formalParameter="presence" />
+								<connection refLocalId="6" formalParameter="presence" />
 							</connectionPointIn>
 							<expression>presConvDw</expression>
 						</outVariable>
-						<outVariable localId="9">
+						<outVariable localId="7">
 							<position x="1512" y="696" />
 							<connectionPointIn>
-								<connection refLocalId="10" formalParameter="idRead" />
+								<connection refLocalId="8" formalParameter="idRead" />
 							</connectionPointIn>
 							<expression>idRead</expression>
 						</outVariable>
-						<outVariable localId="11">
+						<outVariable localId="9">
 							<position x="1512" y="768" />
 							<connectionPointIn>
-								<connection refLocalId="12" formalParameter="Weight" />
+								<connection refLocalId="10" formalParameter="Weight" />
 							</connectionPointIn>
 							<expression>mesuredWeight</expression>
 						</outVariable>
-						<block localId="13" width="442" height="168" typeName="motion_lib.motor_2dir_1speed" instanceName="motConvUp">
-							<position x="384" y="144" />
-							<inputVariables>
-								<variable formalParameter="voltage380">
-									<connectionPointIn>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="cmdSupply">
-									<connectionPointIn>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="sensorSupply">
-									<connectionPointIn>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="forward">
-									<connectionPointIn>
-										<connection refLocalId="0">
-											<position x="320" y="216" />
-											<position x="342" y="216" />
-											<position x="342" y="216" />
-											<position x="384" y="216" />
-										</connection>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="backward">
-									<connectionPointIn>
-										<connection refLocalId="1">
-											<position x="320" y="216" />
-											<position x="342" y="216" />
-											<position x="342" y="216" />
-											<position x="384" y="216" />
-										</connection>
-									</connectionPointIn>
-								</variable>
-							</inputVariables>
-							<inOutVariables>
-							</inOutVariables>
-							<outputVariables>
-								<variable formalParameter="forwardFB">
-									<connectionPointOut>
-									</connectionPointOut>
-								</variable>
-								<variable formalParameter="backwardFB">
-									<connectionPointOut>
-									</connectionPointOut>
-								</variable>
-								<variable formalParameter="thermal">
-									<connectionPointOut>
-									</connectionPointOut>
-								</variable>
-								<variable formalParameter="speedVal">
-									<connectionPointOut>
-									</connectionPointOut>
-								</variable>
-								<variable formalParameter="speedPercent">
-									<connectionPointOut>
-									</connectionPointOut>
-								</variable>
-							</outputVariables>
-							<addData>
-								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
-									<value>cmdUp:312@216,cmd</value>
-								</data>
-								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
-									<value>cmdUp:312@216,cmd</value>
-								</data>
-								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
-									<value>&lt;CLASS_PATTERN&gt;</value>
-								</data>
-								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>caa25dbb-902a-4073-96b4-fdbc267d53c3</value>
-								</data>
-							</addData>
-						</block>
-						<block localId="14" width="442" height="168" typeName="motion_lib.motor_2dir_1speed" instanceName="mtConvDw">
+						<block localId="11" width="442" height="168" typeName="motion_lib.motor_2dir_1speed" instanceName="mtConvDw">
 							<position x="408" y="408" />
 							<inputVariables>
 								<variable formalParameter="voltage380">
@@ -537,7 +438,7 @@
 								</variable>
 								<variable formalParameter="forward">
 									<connectionPointIn>
-										<connection refLocalId="2">
+										<connection refLocalId="0">
 											<position x="368" y="480" />
 											<position x="388" y="480" />
 											<position x="388" y="480" />
@@ -547,7 +448,7 @@
 								</variable>
 								<variable formalParameter="backward">
 									<connectionPointIn>
-										<connection refLocalId="3">
+										<connection refLocalId="1">
 											<position x="368" y="480" />
 											<position x="388" y="480" />
 											<position x="388" y="480" />
@@ -595,7 +496,7 @@
 								</data>
 							</addData>
 						</block>
-						<block localId="15" width="403" height="48" typeName="motion_control.product_creator" instanceName="product_creator1">
+						<block localId="12" width="403" height="48" typeName="motion_control.product_creator" instanceName="product_creator1">
 							<position x="408" y="648" />
 							<inputVariables>
 							</inputVariables>
@@ -612,7 +513,7 @@
 								</data>
 							</addData>
 						</block>
-						<block localId="16" width="408" height="45" typeName="motion_control.product_killer" instanceName="product_killer1">
+						<block localId="13" width="408" height="45" typeName="motion_control.product_killer" instanceName="product_killer1">
 							<position x="408" y="720" />
 							<inputVariables>
 							</inputVariables>
@@ -629,7 +530,7 @@
 								</data>
 							</addData>
 						</block>
-						<block localId="17" width="408" height="45" typeName="motion_control.product_killer" instanceName="product_killer2">
+						<block localId="14" width="408" height="45" typeName="motion_control.product_killer" instanceName="product_killer2">
 							<position x="408" y="768" />
 							<inputVariables>
 							</inputVariables>
@@ -646,7 +547,7 @@
 								</data>
 							</addData>
 						</block>
-						<block localId="18" width="429" height="168" typeName="motion_lib.single_acting_jack" instanceName="ejector">
+						<block localId="15" width="429" height="168" typeName="motion_lib.single_acting_jack" instanceName="ejector">
 							<position x="432" y="888" />
 							<inputVariables>
 								<variable formalParameter="energy">
@@ -663,7 +564,7 @@
 								</variable>
 								<variable formalParameter="valveWork">
 									<connectionPointIn>
-										<connection refLocalId="4">
+										<connection refLocalId="2">
 											<position x="344" y="984" />
 											<position x="378" y="984" />
 											<position x="378" y="960" />
@@ -705,7 +606,64 @@
 								</data>
 							</addData>
 						</block>
-						<block localId="10" width="360" height="71" typeName="motion_lib.qrreader" instanceName="qrreader1">
+						<block localId="16" width="283" height="119" typeName="motion_lib.conveyor" instanceName="conveyorUp">
+							<position x="912" y="144" />
+							<inputVariables>
+								<variable formalParameter="incPositionX">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="incPositionY">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="incPositionZ">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="coordCenterX">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="coordCenterY">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="coordCenterZ">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="incRotationX">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="incRotationY">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="incRotationZ">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="linearSpeed">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>9c440087-8330-42e4-993c-788567f6c19b</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="8" width="360" height="71" typeName="motion_lib.qrreader" instanceName="qrreader1">
 							<position x="1080" y="648" />
 							<inputVariables>
 							</inputVariables>
@@ -723,7 +681,7 @@
 								</data>
 							</addData>
 						</block>
-						<block localId="12" width="364" height="71" typeName="motion_lib.weighingscale" instanceName="weighingscale1">
+						<block localId="10" width="364" height="71" typeName="motion_lib.weighingscale" instanceName="weighingscale1">
 							<position x="1080" y="720" />
 							<inputVariables>
 							</inputVariables>
@@ -741,7 +699,7 @@
 								</data>
 							</addData>
 						</block>
-						<block localId="6" width="397" height="119" typeName="motion_lib.presence_sensor" instanceName="prdEndConvUp">
+						<block localId="4" width="397" height="119" typeName="motion_lib.presence_sensor" instanceName="prdEndConvUp">
 							<position x="1296" y="144" />
 							<inputVariables>
 								<variable formalParameter="incPositionX">
@@ -802,7 +760,7 @@
 								</data>
 							</addData>
 						</block>
-						<block localId="8" width="397" height="119" typeName="motion_lib.presence_sensor" instanceName="prdBegConvDw">
+						<block localId="6" width="397" height="119" typeName="motion_lib.presence_sensor" instanceName="prdBegConvDw">
 							<position x="1296" y="408" />
 							<inputVariables>
 								<variable formalParameter="incPositionX">
@@ -863,70 +821,7 @@
 								</data>
 							</addData>
 						</block>
-						<block localId="19" width="283" height="119" typeName="motion_lib.conveyor" instanceName="conveyorUp">
-							<position x="912" y="144" />
-							<inputVariables>
-								<variable formalParameter="incPositionX">
-									<connectionPointIn>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="incPositionY">
-									<connectionPointIn>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="incPositionZ">
-									<connectionPointIn>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="coordCenterX">
-									<connectionPointIn>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="coordCenterY">
-									<connectionPointIn>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="coordCenterZ">
-									<connectionPointIn>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="incRotationX">
-									<connectionPointIn>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="incRotationY">
-									<connectionPointIn>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="incRotationZ">
-									<connectionPointIn>
-									</connectionPointIn>
-								</variable>
-								<variable formalParameter="linearSpeed">
-									<connectionPointIn>
-										<connection refLocalId="13" formalParameter="speedVal">
-											<position x="826" y="216" />
-											<position x="869" y="216" />
-											<position x="869" y="240" />
-											<position x="912" y="240" />
-										</connection>
-									</connectionPointIn>
-								</variable>
-							</inputVariables>
-							<inOutVariables>
-							</inOutVariables>
-							<outputVariables>
-							</outputVariables>
-							<addData>
-								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
-									<value>&lt;CLASS_PATTERN&gt;</value>
-								</data>
-								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>9c440087-8330-42e4-993c-788567f6c19b</value>
-								</data>
-							</addData>
-						</block>
-						<block localId="20" width="283" height="119" typeName="motion_lib.conveyor" instanceName="conveyorDown">
+						<block localId="17" width="283" height="119" typeName="motion_lib.conveyor" instanceName="conveyorDown">
 							<position x="912" y="408" />
 							<inputVariables>
 								<variable formalParameter="incPositionX">
@@ -967,7 +862,7 @@
 								</variable>
 								<variable formalParameter="linearSpeed">
 									<connectionPointIn>
-										<connection refLocalId="14" formalParameter="speedVal">
+										<connection refLocalId="11" formalParameter="speedVal">
 											<position x="850" y="480" />
 											<position x="881" y="480" />
 											<position x="881" y="504" />
@@ -989,7 +884,7 @@
 								</data>
 							</addData>
 						</block>
-						<block localId="21" width="247" height="119" typeName="motion_lib.pusher" instanceName="pusher1">
+						<block localId="18" width="247" height="119" typeName="motion_lib.pusher" instanceName="pusher1">
 							<position x="984" y="936" />
 							<inputVariables>
 								<variable formalParameter="moveX">
@@ -998,7 +893,7 @@
 								</variable>
 								<variable formalParameter="moveY">
 									<connectionPointIn>
-										<connection refLocalId="18" formalParameter="incrementValue">
+										<connection refLocalId="15" formalParameter="incrementValue">
 											<position x="861" y="960" />
 											<position x="925" y="960" />
 											<position x="925" y="1008" />
@@ -1023,8 +918,7 @@
 						</block>
 					</FBD>
 					<documentation>
-						<xhtml:pre>CB.group=cmdUp,312,216
-CB.group=cmdDw,360,480
+						<xhtml:pre>CB.group=cmdDw,360,480
 </xhtml:pre>
 					</documentation>
 				</body>
