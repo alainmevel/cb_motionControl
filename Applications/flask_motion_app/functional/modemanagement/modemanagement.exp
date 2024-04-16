@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- Generator: ControlBuild -->
 
-<CB_COMPONENT NAME="modemanagement" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" COMPONENT_CLASS_UUID="" AP_DEC="" SIGNATURE="" GENERATION_DATE="" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good">
+<CB_COMPONENT NAME="modemanagement" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" COMPONENT_CLASS_UUID="" AP_DEC="" SIGNATURE="" GENERATION_DATE="" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="bad">
 	<MODEL_REQUIREMENTS>
-		<COMMENTS />
+		<COMMENTS>
+			<comment font="Arial" fontSize="8" textColor="rgb(0,0,0)" backgroundColor="rgb(255,255,225)">
+				<documentation>
+					<xhtml:pre>note</xhtml:pre>
+				</documentation>
+			</comment>
+		</COMMENTS>
 		<FUNCTIONAL_TREE TYPE="logi" />
 	</MODEL_REQUIREMENTS>
 	<externalSrcs />
