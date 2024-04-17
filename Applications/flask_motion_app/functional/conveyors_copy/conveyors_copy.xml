@@ -2,8 +2,8 @@
 <!-- Generator: ControlBuild -->
 
 <project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
-	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x Refresh1" creationDateTime="2024-04-17T17:19:56-01:00" />
-	<contentHeader name="conveyors">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x Refresh1" creationDateTime="2024-04-17T17:20:32-01:00" />
+	<contentHeader name="conveyors_copy">
 		<coordinateInfo>
 			<fbd>
 				<scaling x="100" y="100" />
@@ -19,7 +19,7 @@
 	<types>
 		<dataTypes />
 		<pous>
-			<pou name="flask_motion_app.conveyors" pouType="program">
+			<pou name="flask_motion_app.conveyors_copy" pouType="program">
 				<interface>
 					<inputVars>
 						<variable name="forwardUp">
@@ -31,7 +31,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>2692005c-acbf-4c55-a79c-01124c515df0</value>
+									<value>eb2af65f-46e4-448e-96cc-6fd7886fcff1</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -53,7 +53,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>a7120651-3a68-4550-a735-8838f997db36</value>
+									<value>41150ee2-6372-4434-a333-6b753ad1af11</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -85,7 +85,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>d538d04f-531c-433f-a66c-b90659c7cc3b</value>
+									<value>54e21aa9-34df-46be-aaa0-885666577b05</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -107,7 +107,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>736a6073-a6b1-4310-8322-d1cbb1c58e2b</value>
+									<value>14e0c191-5fd6-4f3e-b021-690bf1d44d93</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -139,7 +139,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>340c76d1-e466-4f92-9572-e55c4bc420b5</value>
+									<value>eeae17bb-f770-480d-91a7-dacc540295c7</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -168,7 +168,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>2a38fc17-a487-4481-8282-b4f4e53726d5</value>
+									<value>723ba1d2-22b2-4d32-90d0-e9ac04b3651e</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -190,7 +190,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>0c817fbf-132c-4fcc-9635-e640d8074f22</value>
+									<value>095f7ba4-8b07-4f14-83b6-048a8209264c</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -212,7 +212,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>c878c5fc-765c-4038-bd16-2f22c46b1d8f</value>
+									<value>3d3cc7d3-f578-4e0f-be2b-2a3d7f6d765a</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -231,7 +231,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>06dbc998-3ff4-4232-8d39-81da59122f27</value>
+									<value>7e96ed55-9184-4054-b8e6-53a70d5a9d43</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -257,7 +257,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>031dfba5-c13c-4af9-9ae4-c0cbb5cd4ac7</value>
+									<value>a619dbe8-73b8-490f-ad1f-513925307def</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -276,7 +276,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>9161f168-ffde-4e2e-871e-6228f6f953a6</value>
+									<value>f9457580-c69d-4c03-9a5a-1c8f345de666</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -295,7 +295,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>ccc80fca-f15d-48e5-9891-95b8e2fb252b</value>
+									<value>38a09e91-3530-45b9-83a0-1bbe1d160118</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -314,7 +314,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>0633d314-7412-49c8-b7a4-d46dd855bfa9</value>
+									<value>a1f0001c-4dbb-44e4-b752-7c5140ebd720</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -333,7 +333,7 @@
 							</initialValue>
 							<addData>
 								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
-									<value>a92dd196-eda4-4ed4-aaa1-9c61d886f9f9</value>
+									<value>8505bb1b-be18-4af0-91df-16a9824a74de</value>
 								</data>
 								<data name="Geensys.CB.visibility" handleUnknown="preserve">
 									<value>true</value>
@@ -516,7 +516,7 @@
 									<value>cmdUp:312@216,cmd</value>
 								</data>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>caa25dbb-902a-4073-96b4-fdbc267d53c3</value>
+									<value>0b449632-6aa5-4409-bc86-e7d4253e9db4</value>
 								</data>
 							</addData>
 						</block>
@@ -591,7 +591,7 @@
 									<value>cmdDw:360@480,cmd</value>
 								</data>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>2d7dee56-1ffc-4052-87fb-391f9b3c9514</value>
+									<value>e1dc8f73-89e8-4552-af7e-db8024cfd784</value>
 								</data>
 							</addData>
 						</block>
@@ -608,7 +608,7 @@
 									<value>&lt;CLASS_PATTERN&gt;</value>
 								</data>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>e0ce9ab9-7e70-4ead-8001-7a0500ef0a3a</value>
+									<value>627f2891-56ce-4cc5-a0d5-98ac3d0b94fc</value>
 								</data>
 							</addData>
 						</block>
@@ -625,7 +625,7 @@
 									<value>&lt;CLASS_PATTERN&gt;</value>
 								</data>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>4d2eb6ce-292e-4293-84aa-7fd91fdb52cc</value>
+									<value>61779fb3-5f92-4e7b-97a4-c653de9032c9</value>
 								</data>
 							</addData>
 						</block>
@@ -642,7 +642,7 @@
 									<value>&lt;CLASS_PATTERN&gt;</value>
 								</data>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>6979a4e0-fe1f-47cc-bf97-a72febdd357d</value>
+									<value>fbfb594e-c8ba-42c5-bd8c-00ac13ccb5ce</value>
 								</data>
 							</addData>
 						</block>
@@ -701,7 +701,7 @@
 									<value>&lt;CLASS_PATTERN&gt;</value>
 								</data>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>f38f7071-ea55-4516-89e1-9a13d01a0a54</value>
+									<value>67888b7f-b84a-4f37-a655-305e6cb75fce</value>
 								</data>
 							</addData>
 						</block>
@@ -719,7 +719,7 @@
 							</outputVariables>
 							<addData>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>466bde77-c4a9-42d1-81eb-cec2c7e11065</value>
+									<value>3dbf4551-b44e-4951-8fd8-947166b647e7</value>
 								</data>
 							</addData>
 						</block>
@@ -737,7 +737,7 @@
 							</outputVariables>
 							<addData>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>f2d2d595-cbb3-4700-8bca-edea00281103</value>
+									<value>57a4217b-e11e-488c-b3d7-bd8723a10297</value>
 								</data>
 							</addData>
 						</block>
@@ -798,7 +798,7 @@
 									<value>&lt;CLASS_PATTERN&gt;</value>
 								</data>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>7d0b99f4-9f0c-4cc7-9efb-97d16bd0143e</value>
+									<value>f27b3e54-2fb8-4b53-baca-7af77a58abc8</value>
 								</data>
 							</addData>
 						</block>
@@ -859,7 +859,7 @@
 									<value>&lt;CLASS_PATTERN&gt;</value>
 								</data>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>cecc8910-6170-49de-a5a2-44a577c2d8ce</value>
+									<value>d4836731-631e-4170-bae1-22013a1a8a9f</value>
 								</data>
 							</addData>
 						</block>
@@ -922,7 +922,7 @@
 									<value>&lt;CLASS_PATTERN&gt;</value>
 								</data>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>9c440087-8330-42e4-993c-788567f6c19b</value>
+									<value>c2bad033-9de1-4f52-afcc-a02c9c322ed3</value>
 								</data>
 							</addData>
 						</block>
@@ -985,7 +985,7 @@
 									<value>&lt;CLASS_PATTERN&gt;</value>
 								</data>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>a5c85e90-14bc-4230-9425-d8bc61268afa</value>
+									<value>632e041b-2e31-49d4-862d-dc428d07d8be</value>
 								</data>
 							</addData>
 						</block>
@@ -1017,7 +1017,7 @@
 							</outputVariables>
 							<addData>
 								<data name="Geensys.CB.UUID" handleUnknown="preserve">
-									<value>54ab8601-66de-463a-a5a7-a744a83e0650</value>
+									<value>e24e874d-755d-4cee-9e9a-e90f72eaae8c</value>
 								</data>
 							</addData>
 						</block>
