@@ -2,7 +2,7 @@
 <!-- Generator: ControlBuild -->
 
 <project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
-	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-04T11:03:58-01:00" />
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x Refresh1" creationDateTime="2024-04-17T15:08:14-01:00" />
 	<contentHeader name="robotctrl">
 		<coordinateInfo>
 			<fbd>
@@ -775,7 +775,9 @@
 				<actions>
 				</actions>
 				<body>
-					<ST>if ((masterPosition &gt;=0.0) and (masterPosition &lt; endPhase1 )) then phaseCode := 1; end_if;
+					<ST>(* comment *)
+
+if ((masterPosition &gt;=0.0) and (masterPosition &lt; endPhase1 )) then phaseCode := 1; end_if;
 if ((masterPosition &gt;= endPhase1 ) and (masterPosition &lt;endPhase2)) then phaseCode := 2; end_if;
 if ((masterPosition &gt;= endPhase2 ) and (masterPosition &lt;endPhase3)) then phaseCode := 3; end_if;
 if ((masterPosition &gt;= endPhase3 ) and (masterPosition &lt;endPhase4)) then phaseCode := 4; end_if;
