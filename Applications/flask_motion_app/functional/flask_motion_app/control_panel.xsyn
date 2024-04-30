@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- Generator: ControlBuild -->
 
-<AWTSynoptic screenX="1600" screenY="2262" name="control_panel.xsyn" description="" date="04/10/2023" time="11:03" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="8a1949c8-aac2-40ca-a9ec-7d4d55c248f1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<AWTSynoptic screenX="1600" screenY="2262" name="control_panel.xsyn" description="" date="30/04/2024" time="15:36" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="8a1949c8-aac2-40ca-a9ec-7d4d55c248f1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Colors>
 		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
 		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
@@ -331,7 +331,7 @@
 			</CustomAnimation>
 		</CustomObject>
 		<CustomObject name="Light" author="Dassault Syst&#232;mes">
-			<Basic xInit="768" yInit="366" xFinal="938" yFinal="520" xCenter="853" yCenter="443" />
+			<Basic xInit="840" yInit="370" xFinal="1010" yFinal="524" xCenter="925" yCenter="447" />
 			<Param>
 				<ParamName>lightOnColor</ParamName>
 				<ParamValue>red</ParamValue>

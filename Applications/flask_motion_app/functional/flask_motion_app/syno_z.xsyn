@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- Generator: ControlBuild -->
 
-<AWTSynoptic screenX="1600" screenY="2262" name="syno_z.xsyn" description="" date="04/10/2023" time="18:11" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="e49f5be0-b57d-460a-89be-6c50e8354bc9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<AWTSynoptic screenX="1600" screenY="2262" name="syno_z.xsyn" description="" date="30/04/2024" time="15:36" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="e49f5be0-b57d-460a-89be-6c50e8354bc9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Colors>
 		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
 		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
@@ -56,12 +56,12 @@
 			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(242,253,208)" />
 		</Rectangle>
 		<Widget src="motion_lib\qrreader\qrreader">
-			<Basic xInit="878" yInit="927" xFinal="1045" yFinal="1108" xCenter="961" yCenter="1017" />
+			<Basic xInit="1105" yInit="357" xFinal="1272" yFinal="538" xCenter="1188" yCenter="447" />
 			<Comment>CB.instance_path=conveyors\qrreader1
 CB.rotation_angle=0
 CB.symmetry_kind=0
-CB.rotation_centerX=878
-CB.rotation_centerY=1108
+CB.rotation_centerX=1105
+CB.rotation_centerY=538
 </Comment>
 			<addData>
 				<data name="componentIdentifier" handleUnknown="preserve">
